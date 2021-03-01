@@ -1,16 +1,27 @@
 <resources>
     <string name="app_name">GestiBank</string>
-    <string name="cr_er_un_nouveau_compte">Créer un nouveau compte</string>
-    <string name="nouveau_compte">Nouveau compte</string>
-    <string name="conversion">Conversion</string>
-    <string name="bienvenue_sur_gestibank">Bienvenue sur Gestibank</string>
-    <string name="logo">logo</string>
-    <string name="montant">Montant</string>
-    <string name="montant">Montant</string>
+    <string name="login">Login</string>
+    <string name="authentification">Authentification</string>
+    <string name="creer_un_compte">Creer un compte</string>
+    <string name="name">Name</string>
+    <string name="prenom">Prenom</string>
+    <string name="button">Button</string>
+    <string name="email">Email</string>
+    <string name="telephone">Telephone</string>
+    <string name="prenom">Prenom</string>
+    <string name="nom">Nom</string>
+    <string name="creation_du_compte">Creation du Compte</string>
+    <string name="somme">Somme</string>
     <string name="de">De</string>
     <string name="vers">vers</string>
     <string name="convertir">Convertir</string>
     <string name="vers">vers</string>
     <string name="de">De</string>
-    <string name="somme">Somme</string>
+    <string name="montant">Montant</string>
+    <string name="montant">Montant</string>
+    <string name="logo">logo</string>
+    <string name="bienvenue_sur_gestibank">Bienvenue sur Gestibank</string>
+    <string name="conversion">Conversion</string>
+    <string name="nouveau_compte">Nouveau compte</string>
+    <string name="cr_er_un_nouveau_compte">Créer un nouveau compte</string>
 </resources>
