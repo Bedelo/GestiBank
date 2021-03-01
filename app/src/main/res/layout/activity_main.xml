@@ -4,20 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/btn_creation"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="50dp"
+            android:padding="15dp"
+            android:text="@string/nouveau_compte"
+            app:backgroundTint="#AE079C4A" />
+
+        <Button
+            android:id="@+id/btn_conversion"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="50dp"
+            android:padding="15dp"
+            android:text="@string/conversion"
+            app:backgroundTint="#AE079C4A"
+            app:rippleColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
+            android:shadowColor="#FFFFFF"
+            android:text="@string/bienvenue_sur_gestibank"
+            android:textColor="#02713B"
+            android:textSize="30sp"
+            app:autoSizeTextType="uniform" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/logo" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
