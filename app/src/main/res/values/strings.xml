@@ -24,4 +24,10 @@
     <string name="conversion">Conversion</string>
     <string name="nouveau_compte">Nouveau compte</string>
     <string name="cr_er_un_nouveau_compte">Créer un nouveau compte</string>
+    <string name="email">Email</string>
+    <string name="button">Button</string>
+    <string name="name">Name</string>
+    <string name="creer_un_compte">Creer un compte</string>
+    <string name="authentification">Authentification</string>
+    <string name="login">Login</string>
 </resources>

@@ -71,10 +71,10 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_connexion_compte"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="50dp"
-            android:text="Button" />
+            android:text="se connecter" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
