@@ -1,7 +1,9 @@
 package com.sip.gestibank.remote;
 
+import com.google.gson.JsonObject;
 import com.sip.gestibank.model.Converter;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.List;
@@ -16,7 +18,7 @@ import retrofit2.http.Path;
 
 public interface ConversionService {
     @GET("/")
-    Call<JSONObject> getConverter();
+    Call<JsonObject> getConversion();
 
 
 

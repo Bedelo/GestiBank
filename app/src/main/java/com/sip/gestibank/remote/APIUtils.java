@@ -6,13 +6,21 @@ public class APIUtils {
     };
 
     public static  String API_URL =  "http://192.168.1.17/api/";
+    public static  String API_CL = "http://api.currencylayer.com/";
+    public static  String Empty_URL = "";
 
     public static ConversionService getUserService(){
         return RetrofitClient.getClient(API_URL).create(ConversionService.class);
     }
 
-    public static ConversionService getConversionService(String url){
+    public static ConversionService getConversionService(){
+        return RetrofitClient.getClient(API_CL).create(ConversionService.class);
+    }
+
+    public static ConversionService getConversionServiceFill(String url){
+        //Empty_URL= "http://api.currencylayer.com/live?access_key=84156eafd8c4c4c4c558362771cf6609&currencies="+url+"&format=1/";
         return RetrofitClient.getClient(url).create(ConversionService.class);
     }
 
 }
+

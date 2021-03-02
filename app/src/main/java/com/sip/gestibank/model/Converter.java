@@ -5,6 +5,8 @@ import com.google.gson.annotations.SerializedName;
 
 import org.json.JSONObject;
 
+import retrofit2.Call;
+
 public class Converter extends JSONObject {
     @SerializedName("success")
     @Expose
@@ -47,8 +49,6 @@ public class Converter extends JSONObject {
         this.quotes= quotes;
     }*/
 
-    public JSONObject getConverter() {
-        return this;
 
-    }
+
 }
