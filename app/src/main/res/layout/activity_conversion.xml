@@ -69,11 +69,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <Spinner
-                    android:id="@+id/spinner_de"
+                <TextView
+                    android:id="@+id/textView_de"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="USD" />
 
                 <Spinner
                     android:id="@+id/spinner_vers"
@@ -97,6 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
+                android:onClick="Convertisseur"
                 android:text="@string/convertir" />
 
         </LinearLayout>
