@@ -1,5 +1,7 @@
 package com.sip.gestibank.remote;
 
+import com.sip.gestibank.Conversion;
+
 public class APIUtils {
 
     private APIUtils(){
@@ -9,5 +11,9 @@ public class APIUtils {
 
     public static UserService getUserService(){
         return RetrofitClient.getClient(API_URL).create(UserService.class);
+    }
+
+    public static String myURL(){
+        return Conversion.getURL();
     }
 }

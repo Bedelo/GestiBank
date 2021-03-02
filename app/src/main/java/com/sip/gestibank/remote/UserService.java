@@ -3,6 +3,7 @@ package com.sip.gestibank.remote;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.Converter;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -11,16 +12,8 @@ import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface UserService {
-    @GET("list/")
-    Call<List<User>> getUsers();
+    @GET("/")
+    Call<List<Converter>> getUsers();
 
-    @POST("add/")
-    Call<User> addUser(@Body User user);
-
-    @PUT("update/{id}")
-    Call<User> updateUser(@Path("id") int id, @Body User user);
-
-    @DELETE("delete/{id}")
-    Call<User> deleteUser(@Path("id") int id);
 
 }

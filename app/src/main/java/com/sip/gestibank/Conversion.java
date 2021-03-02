@@ -12,6 +12,7 @@ import android.os.Bundle;
 public class Conversion extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     String[] devises = {"EUR", "GBP", "TND"};
     Spinner spin;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,9 +39,9 @@ public class Conversion extends AppCompatActivity implements AdapterView.OnItemS
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-    public void Convertisseur(View view){
+    public void urlToConvertisseur(View view){
         String text = this.spin.getSelectedItem().toString();
         String url = "http://api.currencylayer.com/live?access_key=84156eafd8c4c4c4c558362771cf6609&currencies="+ text +"&format=1";
-        
+        return url
     }
 }
