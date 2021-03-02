@@ -2,6 +2,7 @@ package com.sip.gestibank;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -9,10 +10,24 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import android.os.Bundle;
 
+import com.sip.gestibank.model.Converter;
+import com.sip.gestibank.remote.UserService;
+
+import org.json.JSONObject;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class Conversion extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     String[] devises = {"EUR", "GBP", "TND"};
     Spinner spin;
-    
+    String url;
+    JSONObject result;
+    UserService userService;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,9 +54,32 @@ public class Conversion extends AppCompatActivity implements AdapterView.OnItemS
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-    public void urlToConvertisseur(View view){
+    public void urlToConvertisseur(){
         String text = this.spin.getSelectedItem().toString();
-        String url = "http://api.currencylayer.com/live?access_key=84156eafd8c4c4c4c558362771cf6609&currencies="+ text +"&format=1";
-        return url
+        this.url = "http://api.currencylayer.com/live?access_key=84156eafd8c4c4c4c558362771cf6609&currencies="+ text +"&format=1";
     }
+
+    public void getConversion(View v){
+        Call<JSONObject> call = userService.getQuotes();
+        call.enqueue(new Callback<JSONObject>() {
+            @Override
+            public void onResponse(Call<JSONObject> call, Response<JSONObject> response) {
+                if(response.isSuccessful()){
+                    result= response.body();
+                    Log.i("Data: ", result.toString());
+
+                    StringBuffer buffer=new StringBuffer();
+                    
+
+                    // listView.setAdapter(new UserAdapter(MainActivity.this, R.layout.list_user, list));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JSONObject> call, Throwable t) {
+                Log.e("ERROR: ", t.getMessage());
+            }
+        });
+    }
+
 }

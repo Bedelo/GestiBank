@@ -3,7 +3,9 @@ package com.sip.gestibank.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Converter {
+import org.json.JSONObject;
+
+public class Converter extends JSONObject {
     @SerializedName("success")
     @Expose
     private String success;
@@ -26,21 +28,26 @@ public class Converter {
 
     @SerializedName("quotes")
     @Expose
-    private String quotes;
+    private JSONObject quotes;
 
-    public Converter(String success) {
-        this.success = success;
+    @SerializedName("jsonResponse")
+    @Expose
+    private JSONObject jsonResponse;
+
+    public Converter() {
     }
 
-    public Converter(String success, String terms, String privacy, String timestamp, String source, String  quotes) {
+    /*public Converter(String success, String terms, String privacy, String timestamp, String source, JSONObject  quotes) {
         this.success= success;
         this.terms= terms;
         this.privacy= privacy;
         this.timestamp= timestamp;
         this.source= source;
         this.quotes= quotes;
+    }*/
+
+    public JSONObject getQuotes() {
+        return jsonResponse;
+
     }
-
-
-
 }

@@ -1,9 +1,12 @@
 package com.sip.gestibank.remote;
 
+import com.sip.gestibank.model.Converter;
+
+import org.json.JSONObject;
+
 import java.util.List;
 
 import retrofit2.Call;
-import retrofit2.Converter;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -13,7 +16,7 @@ import retrofit2.http.Path;
 
 public interface UserService {
     @GET("/")
-    Call<List<Converter>> getUsers();
+    Call<JSONObject> getQuotes();
 
 
 }

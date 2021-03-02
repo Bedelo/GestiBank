@@ -9,11 +9,8 @@ public class APIUtils {
 
     public static final String API_URL = "http://192.168.43.165:86/api/";
 
-    public static UserService getUserService(){
-        return RetrofitClient.getClient(API_URL).create(UserService.class);
+    public static UserService getUserService(String myURL){
+        return RetrofitClient.getClient(myURL).create(UserService.class);
     }
 
-    public static String myURL(){
-        return Conversion.getURL();
-    }
 }
