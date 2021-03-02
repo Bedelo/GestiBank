@@ -5,7 +5,7 @@ public class APIUtils {
     private APIUtils(){
     };
 
-    public static  String API_URL =  "http://192.168.43.165:86/api/";
+    public static  String API_URL =  "http://192.168.1.17/api/";
 
     public static ConversionService getUserService(){
         return RetrofitClient.getClient(API_URL).create(ConversionService.class);
