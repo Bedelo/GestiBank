@@ -123,6 +123,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="50dp"
+            android:onClick="addNewClient"
             android:text="@string/creer_un_compte"
             android:textColor="#000000"
             app:backgroundTint="#979E97" />

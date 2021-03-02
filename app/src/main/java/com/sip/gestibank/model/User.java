@@ -43,6 +43,15 @@ public class User {
         this.nom= nom;
     }
 
+    public User(String nom, String prenom, String email, int tel) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.tel = tel;
+        this.role= "CLIENT";
+        this.status= "EN ATTENTE";
+    }
+
     public User(String nom, String prenom, String email, int tel, String login, String motpass, String role, String status) {
         this.nom = nom;
         this.prenom = prenom;
@@ -52,15 +61,6 @@ public class User {
         this.motpass = motpass;
         this.role= role;
         this.status= status;
-
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setId(String login) {
-        this.login= login;
     }
 
     public String getNom() {
@@ -69,6 +69,62 @@ public class User {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getTel() {
+        return tel;
+    }
+
+    public void setTel(int tel) {
+        this.tel = tel;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getMotpass() {
+        return motpass;
+    }
+
+    public void setMotpass(String motpass) {
+        this.motpass = motpass;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     @Override
