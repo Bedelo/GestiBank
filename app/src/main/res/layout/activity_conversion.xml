@@ -60,6 +60,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="urlToConvertisseur"
                     android:text="@string/vers"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -98,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:onClick="Convertisseur"
+                android:onClick="getConversion"
                 android:text="@string/convertir" />
 
         </LinearLayout>

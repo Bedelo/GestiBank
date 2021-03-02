@@ -35,6 +35,7 @@ public class Converter extends JSONObject {
     private JSONObject jsonResponse;
 
     public Converter() {
+        {}
     }
 
     /*public Converter(String success, String terms, String privacy, String timestamp, String source, JSONObject  quotes) {
@@ -46,8 +47,8 @@ public class Converter extends JSONObject {
         this.quotes= quotes;
     }*/
 
-    public JSONObject getQuotes() {
-        return jsonResponse;
+    public JSONObject getConverter() {
+        return this;
 
     }
 }
