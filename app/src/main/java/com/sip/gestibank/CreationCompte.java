@@ -28,19 +28,4 @@ public class CreationCompte extends AppCompatActivity {
         startActivity(i);
     }
 
-    private void initToConnexion(){
-        toConnexion = (TextView) findViewById(R.id.textToConnexion);
-        SpannableString content = new SpannableString("Cliquez ici");
-        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
-        String chaine = toConnexion.getText().toString();
-        toConnexion.setText(chaine.concat(content.toString()));
-
-        toConnexion.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v ) {
-                callConnexionPage(v);
-            }
-        });
-    }
 }
