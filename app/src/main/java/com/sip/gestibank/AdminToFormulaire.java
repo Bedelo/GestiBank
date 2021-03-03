@@ -38,11 +38,11 @@ String password="";
     }
     public void addNewAgent(View v){
         password = Password.genPassword();
-        User agent= new User(prenom.getText().toString(),
-                nom.getText().toString(),
-                matricule.getText().toString(),
+        User agent= new User(nom.getText().toString(),
+                prenom.getText().toString(),
                 email.getText().toString(),
-                password);
+                matricule.getText().toString(),
+                password,  "" );
         Call<User> call = adminService.addAgent(agent);
         call.enqueue(new Callback<User>() {
             @Override

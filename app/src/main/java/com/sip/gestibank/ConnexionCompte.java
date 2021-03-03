@@ -26,7 +26,7 @@ import retrofit2.Response;
 public class ConnexionCompte extends AppCompatActivity {
 
     AdminService adminService;
-    User user;
+    User jsonAdmin;
     List<User> myAdminJSON;
     List<User> list = new ArrayList<User>();
     EditText editLogin;
@@ -38,6 +38,8 @@ public class ConnexionCompte extends AppCompatActivity {
         setContentView(R.layout.activity_connexion_compte);
 
         adminService = APIUtils.adminService();
+        editLogin = findViewById(R.id.editLogin);
+        editPassword = findViewById(R.id.editPassword);
     }
     public void callEspaceAdmin(View view){
         Intent i = new Intent(getApplicationContext(), EspaceAdmin.class);
@@ -45,24 +47,31 @@ public class ConnexionCompte extends AppCompatActivity {
     }
 
     public void goToAdminEspace(View v){
-            editLogin = findViewById(R.id.editLogin);
-            editPassword = findViewById(R.id.editPassword);
-        Log.e("entree login: ", ""+editLogin.getText().toString());
-        Log.i("entree login: ", ""+editLogin.getText().toString());
+
+        Log.i("entree login: ", ""+editPassword.getText().toString());
 
             Call<List<User>> call = adminService.getAdmin(editLogin.getText().toString());
             call.enqueue(new Callback<List<User>>() {
                 @Override
                 public void onResponse(Call<List<User>> call, Response<List<User>> response) {
+
                     if(response.isSuccessful()){
                          myAdminJSON = response.body();
-                         /*Log.i("Data: ", "OUIIIIIIIIII: "+myAdminJSON.get(0).toString());
-                         if(myAdminJSON.get(0).getLogin() == editPassword.getText().toString()){
+                         jsonAdmin = myAdminJSON.get(0);
+                        Log.i("User Nom : ", ""+jsonAdmin.getNom());
+                        Log.i("User Prenom : ", ""+jsonAdmin.getPrenom());
+                        Log.i("User Pwd : ", ""+jsonAdmin.getPassword());
+                        Log.i("User Mail : ", ""+jsonAdmin.getEmail());
+                        Log.i("User Log : ", ""+jsonAdmin.getLogin());
+                        Log.i("User Mat. : ", ""+jsonAdmin.getMatricule());
+                        String testmotpass = editPassword.getText().toString();
+
+                         if(testmotpass.equals(jsonAdmin.getPassword())){
                              callEspaceAdmin(v);
+                             //Log.i("User Log DEBUG : ", "YYYYYYYYYYYYYYYYYYYYYYYY");
                          }else{
                              Toast.makeText(ConnexionCompte.this, "LOGIN OR PASSWORD INVALID!!", Toast.LENGTH_SHORT).show();
-                         }*/
-                        callEspaceAdmin(v);
+                         }
                     }
                 }
 

@@ -27,7 +27,7 @@ public class User {
     @Expose
     private String login;
 
-    @SerializedName("password")
+    @SerializedName("motpass")
     @Expose
     private String password;
 
@@ -72,6 +72,16 @@ public class User {
         this.compte= compte;
     }
 
+    public User(String nom, String prenom, String email, String matricule, String password, String status) {
+        this.prenom = prenom;
+        this.nom = nom;
+        this.email = email;
+        this.password = password;
+        this.matricule = matricule;
+        this.status = "valide"+status;
+
+    }
+
     public User(String nom, String prenom, String email, String tel, String login, String password, String role, String status) {
         this.nom = nom;
         this.prenom = prenom;
@@ -81,15 +91,6 @@ public class User {
         this.password = password;
         this.role= role;
         this.status= status;
-    }
-
-    public User(String prenom, String nom, String matricule, String email, String password, String status) {
-        this.prenom = prenom;
-        this.nom = nom;
-        this.email = email;
-        this.password = password;
-        this.matricule = matricule;
-        this.status = "valide";
     }
 
     public String getMatricule(){return matricule;}
