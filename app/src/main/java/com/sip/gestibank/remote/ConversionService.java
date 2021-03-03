@@ -20,8 +20,4 @@ public interface ConversionService {
     @GET("/")
     Call<JsonObject> getConversion();
 
-
-
-
-
 }

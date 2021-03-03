@@ -31,8 +31,11 @@ public class EspaceAdmin extends AppCompatActivity {
     }
 
 
-    public void getAgentsList(View v){
-        Call<List<User>> call = clientService.getAgents();
+    public void callAgentsList(View v){
+        Intent i = new Intent(getApplicationContext(), AdminToListAgent.class);
+        startActivity(i);
+
+        /*Call<List<User>> call = clientService.getAgents();
         call.enqueue(new Callback<List<User>>() {
             @Override
             public void onResponse(Call<List<User>> call, Response<List<User>> response) {
@@ -58,7 +61,7 @@ public class EspaceAdmin extends AppCompatActivity {
             public void onFailure(Call<List<User>> call, Throwable t) {
                 Log.e("ERROR: ", t.getMessage());
             }
-        });
+        });*/
     }
 
     public void showMessage(String title,String message)
