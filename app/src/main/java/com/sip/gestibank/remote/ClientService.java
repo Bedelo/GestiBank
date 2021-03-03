@@ -26,7 +26,7 @@ import com.sip.gestibank.model.User;
 public interface ClientService {
 
 
-    @POST("add/")
+    @POST("client/add")
     Call<User> addClient(@Body User user);
 
 }

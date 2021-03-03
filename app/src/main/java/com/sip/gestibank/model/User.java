@@ -18,7 +18,7 @@ public class User {
 
     @SerializedName("tel")
     @Expose
-    private int tel;
+    private String tel;
 
     @SerializedName("login")
     @Expose
@@ -43,7 +43,7 @@ public class User {
         this.nom= nom;
     }
 
-    public User(String nom, String prenom, String email, int tel) {
+    public User(String nom, String prenom, String email, String tel) {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
@@ -52,7 +52,7 @@ public class User {
         this.status= "EN ATTENTE";
     }
 
-    public User(String nom, String prenom, String email, int tel, String login, String motpass, String role, String status) {
+    public User(String nom, String prenom, String email, String tel, String login, String motpass, String role, String status) {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
@@ -87,11 +87,11 @@ public class User {
         this.email = email;
     }
 
-    public int getTel() {
+    public String getTel() {
         return tel;
     }
 
-    public void setTel(int tel) {
+    public void setTel(String tel) {
         this.tel = tel;
     }
 

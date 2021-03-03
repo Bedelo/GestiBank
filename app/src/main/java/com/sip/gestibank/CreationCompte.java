@@ -47,7 +47,7 @@ public class CreationCompte extends AppCompatActivity {
     }
 
     public void addNewClient(View v){
-         User client= new User(nom.getText().toString(),prenom.getText().toString(),email.getText().toString(),Integer.parseInt(tel.getText().toString()));
+         User client= new User(nom.getText().toString(),prenom.getText().toString(),email.getText().toString(),tel.getText().toString());
          Call<User> call = clientService.addClient(client);
          call.enqueue(new Callback<User>() {
             @Override
