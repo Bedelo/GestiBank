@@ -3,6 +3,7 @@ package com.sip.gestibank;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -67,6 +68,10 @@ public class EspaceAdmin extends AppCompatActivity {
         builder.setTitle(title);
         builder.setMessage(message);
         builder.show();
+    }
+    public void callAddAgent(View view) {
+        Intent i = new Intent(getApplicationContext(), AdminToFormulaire.class);
+        startActivity(i);
     }
 
 }

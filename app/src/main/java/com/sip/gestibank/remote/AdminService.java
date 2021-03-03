@@ -22,4 +22,7 @@ public interface AdminService {
     @GET("client/list/")
     Call<JsonObject> getClientList();
 
+    @POST("agent/add/")
+    Call<User> addAgent(@Body User user);
+
 }

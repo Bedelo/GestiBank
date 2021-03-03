@@ -34,6 +34,7 @@
             android:id="@+id/btn_addAgent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="callAddAgent"
             android:text="Ajouter Agent" />
 
         <Button

@@ -25,4 +25,13 @@
     <string name="sivous_avez_d_j_un_compte">Si vous avez déjà un compte,</string>
     <string name="cliquez_ici"><u>cliquez ici</u></string>
     <string name="type_de_compte">Type de compte</string>
+    <string name="formulaire_agent">Formulaire Agent</string>
+    <string name="cr_er_agent">Créer agent</string>
+    <string name="matricule">Matricule</string>
+    <string name="matricule2">Matricule</string>
+    <string name="mail">Mail</string>
+    <string name="email_form">email</string>
+    <string name="prenom2">Prenom</string>
+    <string name="prenom3">Prenom</string>
+    <string name="name2">Name</string>
 </resources>

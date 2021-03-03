@@ -19,6 +19,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/logo" />
+
         <Button
             android:id="@+id/btn_creation"
             android:layout_width="220dp"
@@ -53,14 +60,6 @@
             android:textColor="#02713B"
             android:textSize="30sp"
             app:autoSizeTextType="uniform" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="106dp"
-            android:layout_marginTop="50dp"
-            android:contentDescription="@string/logo"
-            android:src="@drawable/logo" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
