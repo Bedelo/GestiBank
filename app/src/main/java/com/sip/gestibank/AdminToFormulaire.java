@@ -27,17 +27,22 @@ String password="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_admin_to_formulaire);
         nom = (EditText) findViewById(R.id.editNom);
         matricule = (EditText) findViewById(R.id.editMatricule);
         email = (EditText) findViewById(R.id.editEmailForm);
         prenom = (EditText) findViewById(R.id.editPrenomForm);
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_to_formulaire);
         adminService = APIUtils.adminService();
     }
     public void addNewAgent(View v){
         password = Password.genPassword();
-        User agent= new User(prenom.getText().toString(), nom.getText().toString(), matricule.getText().toString(), email.getText().toString(), password);
+        User agent= new User(prenom.getText().toString(),
+                nom.getText().toString(),
+                matricule.getText().toString(),
+                email.getText().toString(),
+                password);
         Call<User> call = adminService.addAgent(agent);
         call.enqueue(new Callback<User>() {
             @Override
