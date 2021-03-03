@@ -56,12 +56,13 @@ public class ConnexionCompte extends AppCompatActivity {
                 public void onResponse(Call<List<User>> call, Response<List<User>> response) {
                     if(response.isSuccessful()){
                          myAdminJSON = response.body();
-                         Log.i("Data: ", "OUIIIIIIIIII: "+myAdminJSON.get(0).toString());
+                         /*Log.i("Data: ", "OUIIIIIIIIII: "+myAdminJSON.get(0).toString());
                          if(myAdminJSON.get(0).getLogin() == editPassword.getText().toString()){
                              callEspaceAdmin(v);
                          }else{
                              Toast.makeText(ConnexionCompte.this, "LOGIN OR PASSWORD INVALID!!", Toast.LENGTH_SHORT).show();
-                         }
+                         }*/
+                        callEspaceAdmin(v);
                     }
                 }
 
