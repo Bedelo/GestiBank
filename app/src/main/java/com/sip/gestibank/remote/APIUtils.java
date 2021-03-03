@@ -13,6 +13,10 @@ public class APIUtils {
         return RetrofitClient.getClient(API_URL).create(ClientService.class);
     }
 
+    public static AdminService adminService(){
+        return RetrofitClient.getClient(API_URL).create(AdminService.class);
+    }
+
     public static ConversionService getConversionService(){
         return RetrofitClient.getClient(API_CL).create(ConversionService.class);
     }

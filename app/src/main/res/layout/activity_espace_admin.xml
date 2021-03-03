@@ -9,7 +9,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#AE079C4A"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="276dp"
-        tools:layout_editor_absoluteY="349dp"></LinearLayout>
+        tools:layout_editor_absoluteY="349dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_listAgents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Liste des Agents" />
+
+        <Button
+            android:id="@+id/btn_addAgent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajouter Agent" />
+
+        <Button
+            android:id="@+id/btn_listDemandes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consulter Les Demandes" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
