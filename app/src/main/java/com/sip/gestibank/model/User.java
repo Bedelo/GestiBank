@@ -79,6 +79,7 @@ public class User {
         this.password = password;
         this.matricule = matricule;
         this.status = "valide"+status;
+        this.role="agent";
 
     }
 

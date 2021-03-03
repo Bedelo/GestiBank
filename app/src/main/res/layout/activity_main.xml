@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#AE079C4A"
     android:padding="15dp"
     tools:context=".MainActivity">
 
@@ -23,6 +24,7 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="106dp"
+            android:layout_marginTop="10dp"
             android:contentDescription="@string/logo"
             android:src="@drawable/logo" />
 
@@ -53,11 +55,15 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="64dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="50dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
             android:layout_marginBottom="10dp"
             android:shadowColor="#FFFFFF"
             android:text="@string/bienvenue_sur_gestibank"
-            android:textColor="#02713B"
+            android:textColor="#FFFFFF"
             android:textSize="30sp"
             app:autoSizeTextType="uniform" />
 

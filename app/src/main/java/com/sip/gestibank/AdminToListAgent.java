@@ -44,7 +44,7 @@ public class AdminToListAgent extends AppCompatActivity {
             public void onResponse(Call<List<User>> call, Response<List<User>> response) {
                 if(response.isSuccessful()){
                     myListAgent =response.body();
-                    Log.i("MSG:", response.body().toString());
+                    Log.i("MA LISTE: ", myListAgent.toString());
                 }
             }
 
@@ -59,6 +59,9 @@ public class AdminToListAgent extends AppCompatActivity {
 
     public void callListViewAgent(View v){
         callListByAdmin((v));
+        for ( User user : myListAgent ) {
+            
+        }
         ArrayAdapter<User> arrayAdapter = new ArrayAdapter<User>(this, android.R.layout.activity_list_item, myListAgent);
         listViewAgent.setAdapter(arrayAdapter);
 

@@ -2,6 +2,7 @@ package com.sip.gestibank;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -36,6 +37,7 @@ String password="";
         prenom = (EditText) findViewById(R.id.editPrenomForm);
         adminService = APIUtils.adminService();
     }
+
     public void addNewAgent(View v){
         password = Password.genPassword();
         User agent= new User(nom.getText().toString(),
@@ -49,6 +51,7 @@ String password="";
             public void onResponse(Call<User> call, Response<User> response) {
                 if(response.isSuccessful()){
                     Toast.makeText(AdminToFormulaire.this, "Agent created successfully!", Toast.LENGTH_SHORT).show();
+                    callEspaceAdmin(v);
                 }
             }
 
@@ -57,6 +60,12 @@ String password="";
                 Log.e("ERROR: ", t.getMessage());
             }
         });
+    }
+
+    public void callEspaceAdmin(View view){
+        password = "";
+        Intent i = new Intent(getApplicationContext(), EspaceAdmin.class);
+        startActivity(i);
     }
 
 }
