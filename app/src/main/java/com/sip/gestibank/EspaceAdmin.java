@@ -72,5 +72,9 @@ public class EspaceAdmin extends AppCompatActivity {
         builder.setMessage(message);
         builder.show();
     }
+    public void callAddAgent(View view) {
+        Intent i = new Intent(getApplicationContext(), AdminToFormulaire.class);
+        startActivity(i);
+    }
 
 }

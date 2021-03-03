@@ -40,7 +40,7 @@ public class CreationCompte extends AppCompatActivity implements AdapterView.OnI
 
         nom = (EditText) findViewById(R.id.editNom);
         prenom = (EditText) findViewById(R.id.editPrenom);
-        email = (EditText) findViewById(R.id.editEmail);
+        email = (EditText) findViewById(R.id.editEmailForm);
         tel = (EditText) findViewById(R.id.editPhone);
         this.spinner = (Spinner) findViewById(R.id.spinner_compte);
         this.spinner.setOnItemSelectedListener(this);

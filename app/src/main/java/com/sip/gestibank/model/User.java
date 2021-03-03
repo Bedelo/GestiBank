@@ -4,6 +4,7 @@ import android.widget.Spinner;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.sip.gestibank.Password;
 
 public class User {
     @SerializedName("nom")
@@ -26,9 +27,9 @@ public class User {
     @Expose
     private String login;
 
-    @SerializedName("motpass")
+    @SerializedName("password")
     @Expose
-    private String motpass;
+    private String password;
 
     @SerializedName("role")
     @Expose
@@ -41,6 +42,10 @@ public class User {
     @SerializedName("compte")
     @Expose
     private String compte;
+
+    @SerializedName("matricule")
+    @Expose
+    private String matricule;
 
     public User() {
     }
@@ -67,16 +72,29 @@ public class User {
         this.compte= compte;
     }
 
-    public User(String nom, String prenom, String email, String tel, String login, String motpass, String role, String status) {
+    public User(String nom, String prenom, String email, String tel, String login, String password, String role, String status) {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
         this.tel = tel;
         this.login = login;
-        this.motpass = motpass;
+        this.password = password;
         this.role= role;
         this.status= status;
     }
+
+    public User(String prenom, String nom, String matricule, String email, String password, String status) {
+        this.prenom = prenom;
+        this.nom = nom;
+        this.email = email;
+        this.password = password;
+        this.matricule = matricule;
+        this.status = "valide";
+    }
+
+    public String getMatricule(){return matricule;}
+
+    public void setMatricule(){this.matricule = matricule; }
 
     public String getNom() {
         return nom;
@@ -118,12 +136,12 @@ public class User {
         this.login = login;
     }
 
-    public String getMotpass() {
-        return motpass;
+    public String getPassword() {
+        return password;
     }
 
-    public void setMotpass(String motpass) {
-        this.motpass = motpass;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getRole() {
