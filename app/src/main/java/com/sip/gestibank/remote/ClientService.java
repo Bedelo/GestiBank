@@ -25,8 +25,10 @@ import com.sip.gestibank.model.User;
 
 public interface ClientService {
 
+    @GET("agent/list/attente")
+    Call<List<User>> getAgents();
 
-    @POST("client/add")
+    @POST("client/add/")
     Call<User> addClient(@Body User user);
 
 }

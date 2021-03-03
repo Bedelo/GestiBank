@@ -24,4 +24,5 @@
     <string name="se_connecter">se connecter</string>
     <string name="sivous_avez_d_j_un_compte">Si vous avez déjà un compte,</string>
     <string name="cliquez_ici"><u>cliquez ici</u></string>
+    <string name="type_de_compte">Type de compte</string>
 </resources>

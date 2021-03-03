@@ -1,5 +1,7 @@
 package com.sip.gestibank.model;
 
+import android.widget.Spinner;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -36,6 +38,10 @@ public class User {
     @Expose
     private String status;
 
+    @SerializedName("compte")
+    @Expose
+    private String compte;
+
     public User() {
     }
 
@@ -48,8 +54,17 @@ public class User {
         this.prenom = prenom;
         this.email = email;
         this.tel = tel;
+        this.role= "client";
+        this.status= "en attente";
+    }
+    public User(String nom, String prenom, String email, String tel, String compte) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.tel = tel;
         this.role= "CLIENT";
         this.status= "EN ATTENTE";
+        this.compte= compte;
     }
 
     public User(String nom, String prenom, String email, String tel, String login, String motpass, String role, String status) {

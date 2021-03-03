@@ -60,7 +60,7 @@ public class Conversion extends AppCompatActivity implements AdapterView.OnItemS
            // Toast.makeText(getApplicationContext(), devises[position], Toast.LENGTH_LONG).show();
         text = this.spin.getSelectedItem().toString();
         url = "http://api.currencylayer.com/live?access_key=84156eafd8c4c4c4c558362771cf6609&currencies="+text+"&format=1/";
-        textViewRes.setText(text);
+        textViewRes.setText(Password.genPassword());
         conversionService = APIUtils.getConversionServiceFill(url);
     }
 

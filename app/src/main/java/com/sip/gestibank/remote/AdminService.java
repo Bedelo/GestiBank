@@ -1,5 +1,6 @@
 package com.sip.gestibank.remote;
 
+import com.google.gson.JsonObject;
 import com.sip.gestibank.model.User;
 
 import java.util.List;
@@ -15,15 +16,10 @@ import retrofit2.http.Path;
 
 public interface AdminService {
 
-    @GET("list/")
-    Call<User> getUsers();
+    @GET("admin/list/")
+    Call<User> getAdmins();
 
-    @POST("add/")
-    Call<User> addUser(@Body User user);
+    @GET("client/list/")
+    Call<JsonObject> getClientList();
 
-    @PUT("update/{id}")
-    Call<User> updateUser(@Path("id") int id, @Body User user);
-
-    @DELETE("delete/{id}")
-    Call<User> deleteUser(@Path("id") int id);
 }
