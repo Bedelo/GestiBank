@@ -48,8 +48,8 @@ public class User {
         this.prenom = prenom;
         this.email = email;
         this.tel = tel;
-        this.role= "CLIENT";
-        this.status= "EN ATTENTE";
+        this.role= "client";
+        this.status= "en attente";
     }
 
     public User(String nom, String prenom, String email, String tel, String login, String motpass, String role, String status) {

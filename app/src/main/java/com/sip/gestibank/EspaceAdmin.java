@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.sip.gestibank.model.User;
+import com.sip.gestibank.remote.APIUtils;
 import com.sip.gestibank.remote.ClientService;
 
 import java.util.List;
@@ -25,11 +26,12 @@ public class EspaceAdmin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_espace_admin);
+        clientService = APIUtils.userService();
     }
 
 
-    public void getClientsList(View v){
-        Call<List<User>> call = clientService.getClients();
+    public void getAgentsList(View v){
+        Call<List<User>> call = clientService.getAgents();
         call.enqueue(new Callback<List<User>>() {
             @Override
             public void onResponse(Call<List<User>> call, Response<List<User>> response) {
@@ -47,7 +49,7 @@ public class EspaceAdmin extends AppCompatActivity {
                     }
                     showMessage("Clients List", buffer.toString());
 
-                    // listView.setAdapter(new UserAdapter(MainActivity.this, R.layout.list_user, list));
+                    //listView.setAdapter(new UserAdapter(MainActivity.this, R.layout.list_user, list));
                 }
             }
 
