@@ -3,6 +3,9 @@ package com.sip.gestibank.remote;
 import com.google.gson.JsonObject;
 import com.sip.gestibank.model.User;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -21,5 +24,11 @@ public interface AdminService {
 
     @GET("client/list/")
     Call<JsonObject> getClientList();
+
+    @GET("agent/list/")
+    Call<List<User>> getAllAgent();
+
+    @GET("admin/{email}")
+    Call<List<User>>  getAdmin(@Path("email") String email);
 
 }

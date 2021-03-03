@@ -18,16 +18,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center|center_vertical"
-            android:text="TextView"
+            android:text="@string/liste_des_agents"
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_listViewAgents"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:onClick="callListViewAgent"
+            android:text="Afficher Agents" />
 
         <ListView
+            android:id="@+id/listViewAgent"
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
