@@ -5,12 +5,12 @@ public class APIUtils {
     private APIUtils(){
     };
 
-    public static  String API_URL =  "http://192.168.1.17/api/";
+    public static  String API_URL =  "http://192.168.1.17/";
     public static  String API_CL = "http://api.currencylayer.com/";
     public static  String Empty_URL = "";
 
-    public static ConversionService getUserService(){
-        return RetrofitClient.getClient(API_URL).create(ConversionService.class);
+    public static ClientService userService(){
+        return RetrofitClient.getClient(API_URL).create(ClientService.class);
     }
 
     public static ConversionService getConversionService(){

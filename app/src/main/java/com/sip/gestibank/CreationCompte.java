@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sip.gestibank.model.User;
+import com.sip.gestibank.remote.APIUtils;
 import com.sip.gestibank.remote.ClientService;
 
 import retrofit2.Call;
@@ -32,6 +33,7 @@ public class CreationCompte extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creation_compte);
+        clientService = APIUtils.userService();
 
         nom = (EditText) findViewById(R.id.editNom);
         prenom = (EditText) findViewById(R.id.editPrenom);
