@@ -25,7 +25,7 @@
             android:id="@+id/btn_listViewAgents"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="callListViewAgent"
+            android:onClick="callListByAdmin"
             android:text="Afficher Agents" />
 
         <ListView

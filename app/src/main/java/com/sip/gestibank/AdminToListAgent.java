@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.sip.gestibank.model.User;
 import com.sip.gestibank.remote.APIUtils;
@@ -34,16 +36,40 @@ public class AdminToListAgent extends AppCompatActivity {
         setContentView(R.layout.activity_admin_to_list_agent);
         adminService = APIUtils.adminService();
         listViewAgent= findViewById(R.id.listViewAgent);
+
     }
 
     public void callListByAdmin(View v){
-        myListAgent = new ArrayList<User>();
+
+        List<User> image_details = getListViewAgent(v);
+        //final ListView listView = (ListView) findViewById(R.id.listView);
+        listViewAgent.setAdapter(new AgentListAdapter(this, image_details));
+        // When the user clicks on the ListItem
+        listViewAgent.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> a, View v, int position, long id) {
+                Object u = listViewAgent.getItemAtPosition(position);
+                User users = (User) u;
+                Toast.makeText(AdminToListAgent.this, "Selected :" + " " + users,
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
+
+
+    public List<User> getListViewAgent(View v){
+        return myService();
+    }
+
+
+    public List<User>myService(){
         Call<List<User>> call = adminService.getAllAgent();
         call.enqueue(new Callback<List<User>>() {
             @Override
             public void onResponse(Call<List<User>> call, Response<List<User>> response) {
                 if(response.isSuccessful()){
-                    myListAgent =response.body();
+                    myListAgent= response.body();
                     Log.i("MA LISTE: ", myListAgent.toString());
                 }
             }
@@ -53,17 +79,6 @@ public class AdminToListAgent extends AppCompatActivity {
                 Log.e("ERROR: ", t.getMessage());
             }
         });
-
-    }
-
-
-    public void callListViewAgent(View v){
-        callListByAdmin((v));
-        for ( User user : myListAgent ) {
-            
-        }
-        ArrayAdapter<User> arrayAdapter = new ArrayAdapter<User>(this, android.R.layout.activity_list_item, myListAgent);
-        listViewAgent.setAdapter(arrayAdapter);
-
+        return  myListAgent;
     }
 }

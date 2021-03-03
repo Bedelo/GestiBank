@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,20 +46,19 @@ par programme.*/
         if (convertView == null) {
             convertView = layoutInflater.inflate(R.layout.list_view_item_agent, null);
             holder = new ViewHolder();
-            holder.nomView = (TextView)  convertView.findViewById(R.id.);
-            holder.actorAgeView = (TextView)  convertView.findViewById(R.id.textView_Age);
-            holder.actorPaysView = (TextView)  convertView.findViewById(R.id.textView_Pays);
+            holder.nomView = (TextView)  convertView.findViewById(R.id.nomViewItem);
+            holder.prenomView = (TextView)  convertView.findViewById(R.id.prenomViewItem);
+            holder.matriculeView = (TextView)  convertView.findViewById(R.id.matriculeViewItem);
 
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
         User actors = this.listData.get(position);
-        holder.actorNameView.setText(actors.getNom());
-        holder.actorAgeView.setText("Age: " + actors.getAge());
-        holder.actorPaysView.setText("Pays: " + actors.getPays());
-        int imageId = this.getMipmapResIdByName(actors.getFlagName());
-        holder.flagView.setImageResource(imageId);
+        holder.nomView.setText("Nom: " + actors.getNom());
+        holder.prenomView.setText("Prenom: " + actors.getPrenom());
+        holder.matriculeView.setText("Matricule: " + actors.getMatricule());
+
         return convertView;
     }
     // Find Image ID corresponding to the name of the image (in the directory mipmap).
@@ -71,8 +71,9 @@ par programme.*/
         return resID;
     }
     static class ViewHolder {
-        TextView actorNameView;
-        TextView actorAgeView;
-        TextView actorPaysView;
+        TextView nomView;
+        TextView prenomView;
+        TextView matriculeView;
+
     }
 }
