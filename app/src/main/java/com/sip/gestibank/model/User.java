@@ -62,8 +62,8 @@ public class User {
         this.prenom = prenom;
         this.email = email;
         this.tel = tel;
-        this.role= "CLIENT";
-        this.status= "EN ATTENTE";
+        this.role= "client";
+        this.status= "en attente";
         this.compte= compte;
     }
 

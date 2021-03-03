@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest android:targetSandboxVersion="1" xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sip.gestibank">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sip.gestibank"
+    android:targetSandboxVersion="1">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:usesCleartextTraffic="true"
-
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GestiBank">
-        <activity android:name=".EspaceAdmin"></activity>
+        android:theme="@style/Theme.GestiBank"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".AdminToListAgent"></activity>
+        <activity android:name=".AdminToFormulaire" />
+        <activity android:name=".AdminConsults" />
+        <activity android:name=".EspaceAdmin" />
         <activity android:name=".Conversion" />
         <activity android:name=".ConnexionCompte" />
         <activity android:name=".CreationCompte" />
