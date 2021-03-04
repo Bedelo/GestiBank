@@ -87,9 +87,11 @@ public class ConnexionCompte extends AppCompatActivity {
                                  case "agent":
                                      callEspaceAgent(v);
                                      break;
+                                 default:
+                                     Toast.makeText(ConnexionCompte.this, "LOGIN OR PASSWORD INVALID!!", Toast.LENGTH_SHORT).show();
                                 }
                          }else{
-                             Toast.makeText(ConnexionCompte.this, "LOGIN OR PASSWORD INVALID!!", Toast.LENGTH_SHORT).show();
+                             Toast.makeText(ConnexionCompte.this, "ATTENTION: LOGIN OR PASSWORD INVALID!!", Toast.LENGTH_SHORT).show();
                          }
                     }
                 }
