@@ -9,16 +9,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#AE079C4A"
+        android:background="#CE079C4A"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="73dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:id="@+id/formulaireAgent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
             android:gravity="center_horizontal"
             android:text="@string/creation_du_compte"
             android:textColor="#065C32"
@@ -35,6 +36,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/nom"
                 android:textColor="#065C32" />
 
@@ -45,6 +47,7 @@
                 android:layout_weight="1"
                 android:autofillHints=""
                 android:ems="10"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:inputType="textPersonName"
                 android:text="@string/name" />
         </LinearLayout>
@@ -60,6 +63,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/prenom"
                 android:textColor="#065C32" />
 
@@ -70,6 +74,7 @@
                 android:layout_weight="1"
                 android:autofillHints=""
                 android:ems="10"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:inputType="textPersonName"
                 android:text="@string/prenom" />
         </LinearLayout>
@@ -85,6 +90,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/telephone"
                 android:textColor="#065C32" />
 
@@ -95,6 +101,7 @@
                 android:layout_weight="1"
                 android:autofillHints=""
                 android:ems="10"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:inputType="phone" />
 
         </LinearLayout>
@@ -110,6 +117,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/email"
                 android:textColor="#065C32" />
 
@@ -120,6 +128,7 @@
                 android:layout_weight="1"
                 android:autofillHints=""
                 android:ems="10"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:inputType="textEmailAddress" />
 
         </LinearLayout>
@@ -135,6 +144,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/type_de_compte"
                 android:textColor="#065C32" />
 
@@ -143,7 +153,7 @@
                 android:layout_width="195dp"
                 android:layout_height="25dp"
                 android:layout_weight="1"
-                android:background="#4076D56B" />
+                android:background="#20079C4A" />
 
         </LinearLayout>
 
@@ -152,6 +162,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="50dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
             android:onClick="addNewClient"
             android:text="@string/creer_un_compte"
             android:textColor="#FDFDFD"
@@ -168,6 +179,7 @@
                 android:layout_width="76dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/sivous_avez_d_j_un_compte" />
 
             <TextView
@@ -177,6 +189,7 @@
                 android:layout_marginStart="0dp"
                 android:layout_marginLeft="0dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:onClick="callConnexionPage"
                 android:text="@string/cliquez_ici"
                 android:textColor="#2196F3"

@@ -20,14 +20,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
             android:gravity="center"
             android:text="@string/espace_client"
             android:textColor="#065C32"
             android:textSize="30sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="124dp" />
 
         <Button
             android:id="@+id/btn_chequier"
@@ -35,6 +32,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
+            android:layout_marginTop="200dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
             android:text="@string/ch_quier"
             android:textColor="#FFFFFF"
             app:backgroundTint="#065C32"
@@ -45,6 +44,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
             android:text="@string/historique"
             android:textColor="#FFFFFF"
             app:backgroundTint="#065C32"
@@ -56,6 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
             android:text="@string/changer_mot_de_passe"
             app:backgroundTint="#065C32" />
     </LinearLayout>

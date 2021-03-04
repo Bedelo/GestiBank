@@ -21,6 +21,7 @@
             android:id="@+id/textView_titreconversion"
             android:layout_width="match_parent"
             android:layout_height="82dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
             android:gravity="center"
             android:shadowColor="#201F1F"
             android:shadowRadius="2"
@@ -34,6 +35,7 @@
             android:layout_width="135dp"
             android:layout_height="60dp"
             android:layout_marginTop="150dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
             android:text="@string/montant"
             android:textColor="#065C32"
             android:textSize="24sp"
@@ -59,6 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/de"
                 android:textColor="#065C32"
                 android:textSize="20sp" />
@@ -68,6 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/vers"
                 android:textColor="#065C32"
                 android:textSize="20sp" />
@@ -83,6 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/usd" />
 
             <Spinner
@@ -97,6 +102,7 @@
             android:id="@+id/textViewRes"
             android:layout_width="match_parent"
             android:layout_height="71dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
             android:text="@string/somme"
             android:textColor="#065C32"
             android:textSize="20sp"
@@ -108,6 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
             android:onClick="getConverter"
             android:text="@string/convertir"
             android:textColor="#FFFFFF"
