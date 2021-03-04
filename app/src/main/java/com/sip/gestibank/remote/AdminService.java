@@ -33,4 +33,7 @@ public interface AdminService {
     @GET("admin/{email}")
     Call<List<User>>  getAdmin(@Path("email") String email);
 
+    @GET("user/{email}")
+    Call<List<User>>  getUser(@Path("email") String email);
+
 }
