@@ -20,14 +20,19 @@
             android:id="@+id/listViewAdmin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
             android:gravity="center|center_vertical"
             android:text="@string/liste_des_agents"
             android:textSize="30sp" />
 
         <Button
             android:id="@+id/btn_listViewAgents"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="250dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
             android:onClick="myService"
             android:text="@string/afficher_agents"
             app:backgroundTint="#065C32" />

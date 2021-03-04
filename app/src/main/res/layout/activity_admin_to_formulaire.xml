@@ -19,6 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
             android:gravity="center_horizontal"
             android:text="@string/formulaire_agent"
             android:textSize="30sp" />
@@ -34,6 +35,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/prenom" />
 
             <EditText
@@ -58,6 +60,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/nom" />
 
             <EditText
@@ -82,6 +85,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/matricule" />
 
             <EditText
@@ -106,6 +110,7 @@
                 android:layout_width="99dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/mail" />
 
             <EditText
@@ -124,6 +129,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="50dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
             android:onClick="addNewAgent"
             android:text="@string/cr_er_agent"
             android:textColor="#FFFFFF"
