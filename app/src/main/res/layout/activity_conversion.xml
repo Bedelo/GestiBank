@@ -22,6 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="82dp"
             android:gravity="center"
+            android:shadowColor="#201F1F"
+            android:shadowRadius="2"
             android:text="@string/conversion"
             android:textColor="#006532"
             android:textSize="30sp"
