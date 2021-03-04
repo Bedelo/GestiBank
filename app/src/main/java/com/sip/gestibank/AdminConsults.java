@@ -3,6 +3,7 @@ package com.sip.gestibank;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
@@ -14,6 +15,10 @@ import com.sip.gestibank.remote.ClientService;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class AdminConsults extends AppCompatActivity {
 
@@ -36,6 +41,26 @@ public class AdminConsults extends AppCompatActivity {
 
         List<Client> client_details = new ArrayList<Client>();
         listViewClient.setAdapter(new ClientListAdapter(AdminConsults.this, client_details));
+    }
+
+    public void myService(View v){
+        Call<List<Client>> call = clientService.getClients();
+        call.enqueue(new Callback<List<Client>>() {
+            @Override
+            public void onResponse(Call<List<Client>> call, Response<List<Client>> response) {
+                if(response.isSuccessful()){
+                    myListClient= response.body();
+                    Log.i("MA LISTE: ", myListClient.toString());
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Client>> call, Throwable t) {
+                Log.e("ERROR: ", t.getMessage());
+            }
+        });
+        callListClient(v);
 
     }
 }

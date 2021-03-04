@@ -56,6 +56,7 @@
             android:layout_gravity="center"
             android:layout_margin="20dp"
             android:fontFamily="@font/alegreya_sans_sc_medium"
+            android:onClick="callAffectationClient"
             android:text="@string/consulter_les_demandes"
             app:backgroundTint="#065C32" />
 

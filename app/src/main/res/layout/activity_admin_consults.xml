@@ -19,11 +19,12 @@
     </ListView>
 
     <Button
-        android:id="@+id/btn_Back"
+        android:id="@+id/affectation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Retour"
+        android:onClick="myService"
+        android:text="afficher client"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
