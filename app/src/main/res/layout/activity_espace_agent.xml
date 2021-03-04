@@ -54,6 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
+            android:onClick="deconnexionAgent"
             android:text="@string/d_connexion"
             app:backgroundTint="#065C32" />
 

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AE079C4A"
+    tools:context=".ChangementMdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="251dp"
+        tools:layout_editor_absoluteY="161dp">
+
+        <TextView
+            android:id="@+id/textView_mdppage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
+            android:gravity="center"
+            android:text="@string/changement_de_mot_de_passe"
+            android:textColor="#065C32"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="20dp"
+            android:dividerPadding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_oldmdp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
+                android:gravity="center|fill_vertical"
+                android:text="@string/ancien_mot_de_passe"
+                android:textColor="#065C32"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextOldMdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
+                android:inputType="textPassword"
+                android:textColor="#065C32" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:dividerPadding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewNewMdp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
+                android:gravity="center|fill_vertical"
+                android:text="@string/nouveau_mot_de_passe"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextNewMdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
+                android:inputType="textPersonName|textPassword" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_validermdp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
+            android:text="@string/valider_mdp"
+            app:backgroundTint="#065C32" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
