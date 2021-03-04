@@ -37,4 +37,13 @@
     <string name="name2">Name</string>
     <string name="espace_client">Espace Client</string>
     <string name="afficher_agents">Afficher Agents</string>
+    <string name="usd">USD</string>
+    <string name="espace_admin">Espace Admin</string>
+    <string name="liste_des_agents">Liste des Agents</string>
+    <string name="ajouter_agent">Ajouter Agent</string>
+    <string name="consulter_les_demandes">Consulter Les Demandes</string>
+    <string name="ch_quier">Chéquier</string>
+    <string name="historique">Historique</string>
+    <string name="changer_mot_de_passe">Changer mot de passe</string>
+    <string name="conversion">Conversion</string>
 </resources>
