@@ -70,7 +70,7 @@ public class AdminToListAgent extends AppCompatActivity {
 
     }
 
-    public void myService2(View v){
+    /*public void myService2(View v){
         Call<List<User>> call = adminService.getAllAgent();
         call.enqueue(new Callback<List<User>>() {
             @Override
@@ -89,5 +89,5 @@ public class AdminToListAgent extends AppCompatActivity {
                 Log.e("ERROR: ", t.getMessage());
             }
         });
-    }
+    }*/
 }
