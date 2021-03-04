@@ -2,70 +2,60 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/btn_mdp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EspaceClient">
+    android:background="#AE079C4A"
+    tools:context=".EspaceAgent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#AE079C4A"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="276dp"
-        tools:layout_editor_absoluteY="349dp">
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="27dp">
 
         <TextView
-            android:id="@+id/textViewClient"
+            android:id="@+id/textView_Agent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:fontFamily="@font/alegreya_sans_sc_medium"
             android:gravity="center"
-            android:text="@string/espace_client"
+            android:text="@string/espace_agent"
             android:textColor="#065C32"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btn_chequier"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="20dp"
-            android:layout_marginTop="200dp"
-            android:fontFamily="@font/alegreya_sans_sc_medium"
-            android:text="@string/ch_quier"
-            android:textColor="#FFFFFF"
-            app:backgroundTint="#065C32"
-            app:rippleColor="#76FF03" />
-
-        <Button
-            android:id="@+id/btn_historique"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/alegreya_sans_sc_medium"
-            android:text="@string/historique"
-            android:textColor="#FFFFFF"
-            app:backgroundTint="#065C32"
-            app:rippleColor="#76FF03" />
-
-        <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn_cheque"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
             android:fontFamily="@font/alegreya_sans_sc_medium"
-            android:text="@string/changer_mot_de_passe"
-            app:backgroundTint="#065C32" />
+            android:text="@string/g_rer_chequiers"
+            app:backgroundTint="#065C32"
+            app:backgroundTintMode="src_in" />
 
         <Button
-            android:id="@+id/btn_decoClient"
+            android:id="@+id/btn_demandes"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Déconnexion"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/alegreya_sans_sc_medium"
+            android:text="@string/g_rer_demandes"
+            app:backgroundTint="#065C32"
+            app:backgroundTintMode="src_in" />
+
+        <Button
+            android:id="@+id/btn_decoAgent"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:text="@string/d_connexion"
             app:backgroundTint="#065C32" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

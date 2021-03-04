@@ -29,7 +29,7 @@
 
         <Button
             android:id="@+id/btn_listAgents"
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
@@ -40,7 +40,7 @@
 
         <Button
             android:id="@+id/btn_addAgent"
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
@@ -51,12 +51,21 @@
 
         <Button
             android:id="@+id/btn_listDemandes"
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
             android:fontFamily="@font/alegreya_sans_sc_medium"
             android:text="@string/consulter_les_demandes"
+            app:backgroundTint="#065C32" />
+
+        <Button
+            android:id="@+id/btn_decoAdmin"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:text="Déconnexion"
             app:backgroundTint="#065C32" />
 
     </LinearLayout>

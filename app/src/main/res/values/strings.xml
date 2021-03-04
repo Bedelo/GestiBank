@@ -46,6 +46,10 @@
     <string name="historique">Historique</string>
     <string name="changer_mot_de_passe">Changer mot de passe</string>
     <string name="conversion2">Conversion</string>
-    <string name="conversion">Conversion</string>
+    <string name="conversion3">Conversion</string>
     <string name="agent">Agent</string>
+    <string name="espace_agent">Espace Agent</string>
+    <string name="g_rer_chequiers">Gérer chequiers</string>
+    <string name="g_rer_demandes">Gérer demandes</string>
+    <string name="d_connexion">Déconnexion</string>
 </resources>
