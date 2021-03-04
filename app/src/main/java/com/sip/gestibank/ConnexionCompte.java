@@ -47,8 +47,8 @@ public class ConnexionCompte extends AppCompatActivity {
     }
 
     public void callEspaceAgent(View view){
-        /*Intent i = new Intent(getApplicationContext(), EspaceAgent.class);
-        startActivity(i);*/
+        Intent i = new Intent(getApplicationContext(), EspaceAgent.class);
+        startActivity(i);
     }
 
     public void callEspaceClient(View view){
