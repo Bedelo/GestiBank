@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -18,6 +20,8 @@ public class ClientListAdapter extends BaseAdapter {
     private List<Client> listData;
     private LayoutInflater layoutInflater;
     private Context context;
+    Spinner agentViewClient;
+
     public ClientListAdapter(Context aContext, List<Client> listData) {
         this.context = aContext;
         this.listData = listData;
@@ -49,7 +53,8 @@ par programme.*/
             holder.nomViewClient = (TextView)  convertView.findViewById(R.id.nomViewClient);
             holder.prenomViewClient = (TextView)  convertView.findViewById(R.id.prenomViewClient);
             holder.compteViewClient = (TextView)  convertView.findViewById(R.id.compteViewClient);
-            holder.agentViewClient = (Spinner) convertView.findViewById(R.id.agentViewClient);
+
+
             convertView.setTag(holder);
         } else {
             holder = (ClientListAdapter.ViewHolder) convertView.getTag();
@@ -67,8 +72,10 @@ par programme.*/
         TextView nomViewClient;
         TextView prenomViewClient;
         TextView compteViewClient;
-        Spinner agentViewClient;
+//spinner;
         Button btn_valider;
 
     }
+
+
 }

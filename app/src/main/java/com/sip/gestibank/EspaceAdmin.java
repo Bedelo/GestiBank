@@ -77,4 +77,9 @@ public class EspaceAdmin extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void callAffectationClient(View view) {
+        Intent i = new Intent(getApplicationContext(), AdminConsults.class);
+        startActivity(i);
+    }
+
 }

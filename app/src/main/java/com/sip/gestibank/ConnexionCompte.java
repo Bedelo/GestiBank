@@ -46,11 +46,21 @@ public class ConnexionCompte extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void callEspaceAgent(View view){
+        /*Intent i = new Intent(getApplicationContext(), EspaceAgent.class);
+        startActivity(i);*/
+    }
+
+    public void callEspaceClient(View view){
+        Intent i = new Intent(getApplicationContext(), EspaceClient.class);
+        startActivity(i);
+    }
+
     public void goToAdminEspace(View v){
 
         Log.i("entree login: ", ""+editPassword.getText().toString());
 
-            Call<List<User>> call = adminService.getAdmin(editLogin.getText().toString());
+            Call<List<User>> call = adminService.getUser(editLogin.getText().toString());
             call.enqueue(new Callback<List<User>>() {
                 @Override
                 public void onResponse(Call<List<User>> call, Response<List<User>> response) {
@@ -66,11 +76,22 @@ public class ConnexionCompte extends AppCompatActivity {
                         Log.i("User Mat. : ", ""+jsonAdmin.getMatricule());
                         String testmotpass = editPassword.getText().toString();
 
-                         if(testmotpass.equals(jsonAdmin.getPassword())){
-                             callEspaceAdmin(v);
-                             //Log.i("User Log DEBUG : ", "YYYYYYYYYYYYYYYYYYYYYYYY");
+                         if(testmotpass.equals(jsonAdmin.getPassword()) ){
+                             switch(jsonAdmin.getRole()) {
+                                 case "admin":
+                                     callEspaceAdmin(v);
+                                     break;
+                                 case "client":
+                                     callEspaceClient(v);
+                                     break;
+                                 case "agent":
+                                     callEspaceAgent(v);
+                                     break;
+                                 default:
+                                     Toast.makeText(ConnexionCompte.this, "LOGIN OR PASSWORD INVALID!!", Toast.LENGTH_SHORT).show();
+                                }
                          }else{
-                             Toast.makeText(ConnexionCompte.this, "LOGIN OR PASSWORD INVALID!!", Toast.LENGTH_SHORT).show();
+                             Toast.makeText(ConnexionCompte.this, "ATTENTION: LOGIN OR PASSWORD INVALID!!", Toast.LENGTH_SHORT).show();
                          }
                     }
                 }

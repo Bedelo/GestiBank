@@ -52,4 +52,5 @@
     <string name="g_rer_chequiers">Gérer chequiers</string>
     <string name="g_rer_demandes">Gérer demandes</string>
     <string name="d_connexion">Déconnexion</string>
+    <string name="back">Back</string>
 </resources>
