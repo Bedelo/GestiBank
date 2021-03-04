@@ -23,43 +23,43 @@ import retrofit2.Response;
 public class AdminConsults extends AppCompatActivity {
 
 
-    List<Client> myListClient;
+    List<User> myListClient;
     ClientService clientService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_consults);
-
+        myListClient= new ArrayList<User>();
         clientService = APIUtils.userService();
-        myListClient= new ArrayList<Client>();
+
     }
 
     public void callListClient(View v){
 
         final ListView listViewClient = (ListView) findViewById(R.id.listViewClient);
 
-        List<Client> client_details = new ArrayList<Client>();
+        List<User> client_details = myListClient;
         listViewClient.setAdapter(new ClientListAdapter(AdminConsults.this, client_details));
     }
 
     public void myService(View v){
-        Call<List<Client>> call = clientService.getClients();
-        call.enqueue(new Callback<List<Client>>() {
+        Call<List<User>> call = clientService.listClients();
+        call.enqueue(new Callback<List<User>>() {
             @Override
-            public void onResponse(Call<List<Client>> call, Response<List<Client>> response) {
+            public void onResponse(Call<List<User>> call, Response<List<User>> response) {
                 if(response.isSuccessful()){
                     myListClient= response.body();
                     Log.i("MA LISTE: ", myListClient.toString());
-
                 }
             }
 
             @Override
-            public void onFailure(Call<List<Client>> call, Throwable t) {
+            public void onFailure(Call<List<User>> call, Throwable t) {
                 Log.e("ERROR: ", t.getMessage());
             }
         });
+        Log.i("MA LISTE: ", myListClient.get(1).getPrenom());
         callListClient(v);
 
     }

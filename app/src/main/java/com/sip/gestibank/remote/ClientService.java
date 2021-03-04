@@ -29,10 +29,16 @@ public interface ClientService {
     @GET("agent/list/attente")
     Call<List<User>> getAgents();
 
+    @GET("agent/list/")
+    Call<List<User>> listAgents();
+
     @POST("client/add/")
     Call<User> addClient(@Body User user);
 
     @GET("client/list/")
     Call<List<Client>>  getClients();
+
+    @GET("client/list/")
+    Call<List<User>>  listClients();
 
 }
