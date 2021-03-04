@@ -36,4 +36,5 @@
     <string name="prenom3">Prenom</string>
     <string name="name2">Name</string>
     <string name="espace_client">Espace Client</string>
+    <string name="afficher_agents">Afficher Agents</string>
 </resources>

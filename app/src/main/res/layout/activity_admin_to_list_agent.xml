@@ -10,8 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="161dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/listViewAdmin"
@@ -25,8 +27,8 @@
             android:id="@+id/btn_listViewAgents"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="callListByAdmin"
-            android:text="Afficher Agents" />
+            android:onClick="myService"
+            android:text="@string/afficher_agents" />
 
         <ListView
             android:id="@+id/listViewAgent"
