@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -19,7 +20,8 @@ public class ClientListAdapter extends BaseAdapter {
     private List<Client> listData;
     private LayoutInflater layoutInflater;
     private Context context;
-    Spinner spinner;
+    Spinner agentViewClient;
+
     public ClientListAdapter(Context aContext, List<Client> listData) {
         this.context = aContext;
         this.listData = listData;
@@ -51,7 +53,7 @@ par programme.*/
             holder.nomViewClient = (TextView)  convertView.findViewById(R.id.nomViewClient);
             holder.prenomViewClient = (TextView)  convertView.findViewById(R.id.prenomViewClient);
             holder.compteViewClient = (TextView)  convertView.findViewById(R.id.compteViewClient);
-            holder.agentViewClient = (Spinner) convertView.findViewById(R.id.agentViewClient);
+
 
             convertView.setTag(holder);
         } else {
@@ -61,7 +63,7 @@ par programme.*/
         holder.nomViewClient.setText(user.getNom());
         holder.prenomViewClient.setText(user.getPrenom());
         holder.compteViewClient.setText(user.getCompte());
-         holder.agentViewClient.setOnItemClickListener(this);
+
 
         return convertView;
     }
@@ -70,18 +72,10 @@ par programme.*/
         TextView nomViewClient;
         TextView prenomViewClient;
         TextView compteViewClient;
-        Spinner agentViewClient;
+//spinner;
         Button btn_valider;
 
     }
 
-    private String getCompteClient(View v){
-        spinner = (Spinner) findViewById(R.id.agentViewClient);
-        spinner.setOnItemSelectedListener(this);
-        ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,comptes);
-        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(aa);
-        String compte = this.spinner.getSelectedItem().toString();
-        return compte;
-    }
+
 }
