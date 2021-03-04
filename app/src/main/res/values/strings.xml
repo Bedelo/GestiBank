@@ -37,4 +37,5 @@
     <string name="name2">Name</string>
     <string name="espace_client">Espace Client</string>
     <string name="afficher_agents">Afficher Agents</string>
+    <string name="agent">Agent</string>
 </resources>

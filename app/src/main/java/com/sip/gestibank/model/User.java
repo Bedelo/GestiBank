@@ -83,16 +83,6 @@ public class User {
 
     }
 
-    public User(String nom, String prenom, String email, String tel, String login, String password, String role, String status) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.email = email;
-        this.tel = tel;
-        this.login = login;
-        this.password = password;
-        this.role= role;
-        this.status= status;
-    }
 
     public User(String prenom, String nom, String matricule, String email, String password, String status, String role) {
         this.prenom = prenom;

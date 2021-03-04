@@ -50,7 +50,7 @@
             android:layout_marginBottom="20dp"
             android:layout_weight="1"
             android:gravity="center|center_horizontal|center_vertical"
-            android:text="Button"
+            android:text="Suppression"
             android:textColor="#18391A"
             app:backgroundTint="#979E97" />
     </LinearLayout>
