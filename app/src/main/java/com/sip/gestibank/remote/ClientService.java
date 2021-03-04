@@ -1,5 +1,6 @@
 package com.sip.gestibank.remote;
 
+import com.sip.gestibank.model.Client;
 import com.sip.gestibank.model.User;
 
 import retrofit2.Call;
@@ -30,5 +31,8 @@ public interface ClientService {
 
     @POST("client/add/")
     Call<User> addClient(@Body User user);
+
+    @GET("client/list/")
+    Call<List<Client>>  getClients();
 
 }

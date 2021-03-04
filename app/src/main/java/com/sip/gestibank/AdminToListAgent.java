@@ -28,8 +28,8 @@ public class AdminToListAgent extends AppCompatActivity {
 
     List<User> myListAgent;
     AdminService adminService;
-    List<User> myList ;
-    //ListView listViewAgent;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,23 +45,7 @@ public class AdminToListAgent extends AppCompatActivity {
 
         List<User> user_details = myListAgent;
         listViewAgent.setAdapter(new AgentListAdapter(AdminToListAgent.this, user_details));
-        // When the user clicks on the ListItem
-        /*listViewAgent.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> a, View v, int position, long id) {
 
-                Object u = listViewAgent.getItemAtPosition(position);
-                User users = (User) u;
-                Toast.makeText(AdminToListAgent.this, "Selected :" + " " + users,
-                        Toast.LENGTH_LONG).show();
-            }
-        });*/
-
-    }
-
-
-    public List<User> getListViewAgent(View v){
-        return myListAgent;
     }
 
 

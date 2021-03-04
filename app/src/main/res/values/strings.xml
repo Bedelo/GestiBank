@@ -46,4 +46,6 @@
     <string name="historique">Historique</string>
     <string name="changer_mot_de_passe">Changer mot de passe</string>
     <string name="conversion2">Conversion</string>
+    <string name="conversion">Conversion</string>
+    <string name="agent">Agent</string>
 </resources>

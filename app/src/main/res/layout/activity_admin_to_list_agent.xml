@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#AE079C4A"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +29,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="myService"
-            android:text="@string/afficher_agents" />
+            android:text="@string/afficher_agents"
+            app:backgroundTint="#065C32" />
 
         <ListView
             android:id="@+id/listViewAgent"
