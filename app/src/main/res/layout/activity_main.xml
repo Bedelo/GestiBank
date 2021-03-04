@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#979E97"
+        android:background="AE079C4A"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
             android:onClick="callCreationPage"
             android:padding="15dp"
             android:text="@string/nouveau_compte"
-            app:backgroundTint="#AE079C4A" />
+            app:backgroundTint="#065C32" />
 
         <Button
             android:id="@+id/btn_conversion"
@@ -48,7 +48,7 @@
             android:onClick="callConversionPage"
             android:padding="15dp"
             android:text="@string/conversion"
-            app:backgroundTint="#AE079C4A"
+            app:backgroundTint="#065C32"
             app:rippleColor="#FFFFFF" />
 
         <TextView
@@ -63,7 +63,7 @@
             android:layout_marginBottom="10dp"
             android:shadowColor="#FFFFFF"
             android:text="@string/bienvenue_sur_gestibank"
-            android:textColor="#FFFFFF"
+            android:textColor="#065C32"
             android:textSize="30sp"
             app:autoSizeTextType="uniform" />
 

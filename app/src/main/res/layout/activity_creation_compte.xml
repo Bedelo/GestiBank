@@ -21,6 +21,7 @@
             android:layout_margin="20dp"
             android:gravity="center_horizontal"
             android:text="@string/creation_du_compte"
+            android:textColor="#065C32"
             android:textSize="30sp" />
 
         <LinearLayout
@@ -34,7 +35,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/nom" />
+                android:text="@string/nom"
+                android:textColor="#065C32" />
 
             <EditText
                 android:id="@+id/editNom"
@@ -58,7 +60,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/prenom" />
+                android:text="@string/prenom"
+                android:textColor="#065C32" />
 
             <EditText
                 android:id="@+id/editPrenom"
@@ -82,7 +85,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/telephone" />
+                android:text="@string/telephone"
+                android:textColor="#065C32" />
 
             <EditText
                 android:id="@+id/editPhone"
@@ -106,7 +110,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/email" />
+                android:text="@string/email"
+                android:textColor="#065C32" />
 
             <EditText
                 android:id="@+id/editEmailForm"
@@ -130,7 +135,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/type_de_compte" />
+                android:text="@string/type_de_compte"
+                android:textColor="#065C32" />
 
             <Spinner
                 android:id="@+id/spinner_compte"
@@ -148,8 +154,8 @@
             android:layout_margin="50dp"
             android:onClick="addNewClient"
             android:text="@string/creer_un_compte"
-            android:textColor="#000000"
-            app:backgroundTint="#979E97" />
+            android:textColor="#FDFDFD"
+            app:backgroundTint="#065C32" />
 
         <LinearLayout
             android:layout_width="match_parent"

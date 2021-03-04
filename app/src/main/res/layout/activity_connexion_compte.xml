@@ -19,6 +19,7 @@
             android:layout_margin="20dp"
             android:gravity="center"
             android:text="@string/authentification"
+            android:textColor="#065C32"
             android:textSize="30sp" />
 
         <LinearLayout
@@ -32,7 +33,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/login" />
+                android:text="@string/login"
+                android:textColor="#065C32" />
 
             <EditText
                 android:id="@+id/editLogin"
@@ -57,7 +59,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/password" />
+                android:text="@string/password"
+                android:textColor="#065C32" />
 
             <EditText
                 android:id="@+id/editPassword"
@@ -72,10 +75,12 @@
 
         <Button
             android:id="@+id/btn_connexion_compte"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_margin="50dp"
             android:onClick="goToAdminEspace"
-            android:text="@string/se_connecter" />
+            android:text="@string/se_connecter"
+            app:backgroundTint="#065C32" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

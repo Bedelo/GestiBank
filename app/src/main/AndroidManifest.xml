@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GestiBank"
         android:usesCleartextTraffic="true">
-        <activity android:name=".AdminToListAgent"></activity>
+        <activity android:name=".EspaceClient"></activity>
+        <activity android:name=".AdminToListAgent" />
         <activity android:name=".AdminToFormulaire" />
         <activity android:name=".AdminConsults" />
         <activity android:name=".EspaceAdmin" />

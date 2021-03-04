@@ -94,6 +94,16 @@ public class User {
         this.status= status;
     }
 
+    public User(String prenom, String nom, String matricule, String email, String password, String status, String role) {
+        this.prenom = prenom;
+        this.nom = nom;
+        this.email = email;
+        this.password = password;
+        this.matricule = matricule;
+        this.status = "valide";
+        this.role = "agent";
+    }
+
     public String getMatricule(){return matricule;}
 
     public void setMatricule(){this.matricule = matricule; }

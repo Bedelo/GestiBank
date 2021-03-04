@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EspaceClient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AE079C4A"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="276dp"
+        tools:layout_editor_absoluteY="349dp">
+
+        <TextView
+            android:id="@+id/textViewClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="@string/espace_client"
+            android:textColor="#065C32"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_chequier"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:text="Chéquier"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#065C32"
+            app:rippleColor="#76FF03" />
+
+        <Button
+            android:id="@+id/btn_historique"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Historique"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#065C32"
+            app:rippleColor="#76FF03" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

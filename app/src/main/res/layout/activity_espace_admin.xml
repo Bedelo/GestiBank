@@ -20,27 +20,39 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:gravity="center"
+            android:shadowColor="#FFC400"
+            android:shadowRadius="20"
             android:text="Espace Admin"
+            android:textColor="#065C32"
             android:textSize="30sp" />
 
         <Button
             android:id="@+id/btn_listAgents"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
             android:onClick="callAgentsList"
-            android:text="Liste des Agents" />
+            android:text="Liste des Agents"
+            app:backgroundTint="#065C32" />
 
         <Button
             android:id="@+id/btn_addAgent"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
             android:onClick="callAddAgent"
-            android:text="Ajouter Agent" />
+            android:text="Ajouter Agent"
+            app:backgroundTint="#065C32" />
 
         <Button
             android:id="@+id/btn_listDemandes"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Consulter Les Demandes" />
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:text="Consulter Les Demandes"
+            app:backgroundTint="#065C32" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
