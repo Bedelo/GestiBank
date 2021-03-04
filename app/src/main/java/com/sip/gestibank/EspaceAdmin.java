@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-
 import com.sip.gestibank.model.User;
 import com.sip.gestibank.remote.APIUtils;
 import com.sip.gestibank.remote.ClientService;
@@ -79,6 +78,10 @@ public class EspaceAdmin extends AppCompatActivity {
 
     public void callAffectationClient(View view) {
         Intent i = new Intent(getApplicationContext(), AdminConsults.class);
+        startActivity(i);
+    }
+    public void deconnexionAdmin(View view) {
+        Intent i = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(i);
     }
 
