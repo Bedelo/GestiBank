@@ -35,4 +35,5 @@
     <string name="prenom2">Prenom</string>
     <string name="prenom3">Prenom</string>
     <string name="name2">Name</string>
+    <string name="afficher_agents">Afficher Agents</string>
 </resources>

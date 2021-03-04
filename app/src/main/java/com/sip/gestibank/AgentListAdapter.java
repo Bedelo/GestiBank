@@ -46,34 +46,28 @@ par programme.*/
         if (convertView == null) {
             convertView = layoutInflater.inflate(R.layout.list_view_item_agent, null);
             holder = new ViewHolder();
-            holder.nomView = (TextView)  convertView.findViewById(R.id.nomViewItem);
-            holder.prenomView = (TextView)  convertView.findViewById(R.id.prenomViewItem);
-            holder.matriculeView = (TextView)  convertView.findViewById(R.id.matriculeViewItem);
-
+            holder.nomViewItem = (TextView)  convertView.findViewById(R.id.nomViewItem);
+            holder.prenomViewItem = (TextView)  convertView.findViewById(R.id.prenomViewItem);
+            holder.matriculeViewItem = (TextView)  convertView.findViewById(R.id.matriculeViewItem);
+            holder.myBTN = (Button) convertView.findViewById(R.id.btn_listViewAgents);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        User actors = this.listData.get(position);
-        holder.nomView.setText("Nom: " + actors.getNom());
-        holder.prenomView.setText("Prenom: " + actors.getPrenom());
-        holder.matriculeView.setText("Matricule: " + actors.getMatricule());
+        User user = listData.get(position);
+        holder.nomViewItem.setText("Nom: " + user.getNom());
+        holder.prenomViewItem.setText("Prenom: " + user.getPrenom());
+        holder.matriculeViewItem.setText("Matricule: " + user.getMatricule());
+
 
         return convertView;
     }
-    // Find Image ID corresponding to the name of the image (in the directory mipmap).
-    public int getMipmapResIdByName(String resName) {
-        String pkgName = context.getPackageName();
-        // Return 0 if not found.
-        int resID = context.getResources().getIdentifier(resName , "mipmap",
-                pkgName);
-        Log.i("CustomListView", "Res Name: "+ resName+"==> Res ID = "+ resID);
-        return resID;
-    }
+
     static class ViewHolder {
-        TextView nomView;
-        TextView prenomView;
-        TextView matriculeView;
+        TextView nomViewItem;
+        TextView prenomViewItem;
+        TextView matriculeViewItem;
+        Button myBTN;
 
     }
 }

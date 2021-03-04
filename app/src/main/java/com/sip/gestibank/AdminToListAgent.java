@@ -28,42 +28,44 @@ public class AdminToListAgent extends AppCompatActivity {
 
     List<User> myListAgent;
     AdminService adminService;
-    ListView listViewAgent;
-
+    List<User> myList ;
+    //ListView listViewAgent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_to_list_agent);
         adminService = APIUtils.adminService();
-        listViewAgent= findViewById(R.id.listViewAgent);
+        myListAgent = new ArrayList<User>();
 
     }
 
     public void callListByAdmin(View v){
 
-        List<User> image_details = getListViewAgent(v);
-        //final ListView listView = (ListView) findViewById(R.id.listView);
-        listViewAgent.setAdapter(new AgentListAdapter(this, image_details));
+        final ListView listViewAgent = (ListView) findViewById(R.id.listViewAgent);
+
+        List<User> user_details = myListAgent;
+        listViewAgent.setAdapter(new AgentListAdapter(AdminToListAgent.this, user_details));
         // When the user clicks on the ListItem
-        listViewAgent.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*listViewAgent.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
+
                 Object u = listViewAgent.getItemAtPosition(position);
                 User users = (User) u;
                 Toast.makeText(AdminToListAgent.this, "Selected :" + " " + users,
                         Toast.LENGTH_LONG).show();
             }
-        });
+        });*/
 
     }
 
 
     public List<User> getListViewAgent(View v){
-        return myService();
+        return myListAgent;
     }
 
 
-    public List<User>myService(){
+    public void myService(View v){
         Call<List<User>> call = adminService.getAllAgent();
         call.enqueue(new Callback<List<User>>() {
             @Override
@@ -71,6 +73,7 @@ public class AdminToListAgent extends AppCompatActivity {
                 if(response.isSuccessful()){
                     myListAgent= response.body();
                     Log.i("MA LISTE: ", myListAgent.toString());
+
                 }
             }
 
@@ -79,6 +82,28 @@ public class AdminToListAgent extends AppCompatActivity {
                 Log.e("ERROR: ", t.getMessage());
             }
         });
-        return  myListAgent;
+        callListByAdmin(v);
+
+    }
+
+    public void myService2(View v){
+        Call<List<User>> call = adminService.getAllAgent();
+        call.enqueue(new Callback<List<User>>() {
+            @Override
+            public void onResponse(Call<List<User>> call, Response<List<User>> response) {
+                if(response.isSuccessful()){
+                    myListAgent= response.body();
+                    Log.i("MA LISTE: ", myListAgent.get(0).toString());
+                    Log.i("MA LISTE: ", myListAgent.get(0).getMatricule());
+                    Log.i("MA LISTE: ", myListAgent.get(0).getPrenom());
+                    Log.i("MA LISTE: ", myListAgent.get(0).getNom());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<User>> call, Throwable t) {
+                Log.e("ERROR: ", t.getMessage());
+            }
+        });
     }
 }
