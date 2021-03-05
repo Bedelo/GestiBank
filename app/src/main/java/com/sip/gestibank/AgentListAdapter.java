@@ -49,7 +49,7 @@ par programme.*/
             holder.nomViewItem = (TextView)  convertView.findViewById(R.id.nomViewItem);
             holder.prenomViewItem = (TextView)  convertView.findViewById(R.id.prenomViewItem);
             holder.matriculeViewItem = (TextView)  convertView.findViewById(R.id.matriculeViewItem);
-            holder.myBTN = (Button) convertView.findViewById(R.id.btn_listViewAgents);
+            holder.myBTN = (Button) convertView.findViewById(R.id.btn_ViewItem);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();

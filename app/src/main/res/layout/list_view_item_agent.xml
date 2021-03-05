@@ -1,58 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
+
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="97dp"
-        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#065C32"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="261dp"
-            android:layout_height="wrap_content"
-            android:background="#634CAF50"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/nomViewItem"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Nom Agent"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/prenomViewItem"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Prenom Agent"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/matriculeViewItem"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Matricule Agent"
-                android:textSize="24sp" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_ViewItem"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_weight="1"
-            android:gravity="center|center_horizontal|center_vertical"
-            android:text="Suppression"
-            android:textColor="#FFFFFF"
-            app:backgroundTint="#065C32" />
+            android:layout_height="97dp"
+            android:layout_margin="4dp"
+            android:background="#FFFFFF"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="261dp"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nomViewItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nom Agent"
+                    android:textColor="#065C32"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/prenomViewItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Prenom Agent"
+                    android:textColor="#065C32"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/matriculeViewItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Matricule Agent"
+                    android:textColor="#065C32"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_ViewItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Suppression"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
