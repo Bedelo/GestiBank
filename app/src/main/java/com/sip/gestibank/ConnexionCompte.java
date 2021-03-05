@@ -3,6 +3,7 @@ package com.sip.gestibank;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -31,6 +32,7 @@ public class ConnexionCompte extends AppCompatActivity {
     List<User> list = new ArrayList<User>();
     EditText editLogin;
     EditText editPassword;
+    String messageAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,8 @@ public class ConnexionCompte extends AppCompatActivity {
         adminService = APIUtils.adminService();
         editLogin = findViewById(R.id.editLogin);
         editPassword = findViewById(R.id.editPassword);
+
+
     }
     public void callEspaceAdmin(View view){
         Intent i = new Intent(getApplicationContext(), EspaceAdmin.class);
@@ -79,6 +83,7 @@ public class ConnexionCompte extends AppCompatActivity {
                          if(testmotpass.equals(jsonAdmin.getPassword()) ){
                              switch(jsonAdmin.getRole()) {
                                  case "admin":
+                                     Log.i("AUTHENTIFiCATION : ", "ok");
                                      callEspaceAdmin(v);
                                      break;
                                  case "client":
@@ -102,4 +107,6 @@ public class ConnexionCompte extends AppCompatActivity {
                 }
             });
     }
+
+
 }

@@ -13,9 +13,11 @@ public class Password {
    }
     public static String genPassword(){
         rand = new Random();
-        for( int i = 0; i< 10; i++)
+        String interPWD = "";
+        for( int i = 0; i< 5; i++)
 
         {
+            valeur = interPWD;
             int k = rand.nextInt(alphabet.length());
             valeur = valeur + alphabet.charAt(k);
         }
