@@ -35,13 +35,13 @@ public class ClientListAdapter extends BaseAdapter {
     ClientService clientService;
     String[] mon;
 
-    public ClientListAdapter(Context aContext, List<User> listData) {
+    public ClientListAdapter(Context aContext, List<User> listData, String[] agentDisplay) {
         this.context = aContext;
         this.listData = listData;
         clientService = APIUtils.userService();
         list= new ArrayList<User>();
         layoutInflater = LayoutInflater.from(aContext);
-        mon = getMyAgentLogin();
+        mon = agentDisplay;
  /*LayoutInflater est une classe utilisée pour instancier le fichier XML de
 mise en page dans ses objets de vue correspondants qui peuvent être utilisés dans les
 programmes Java. En termes simples, il existe deux façons de créer une interface
@@ -85,11 +85,11 @@ par programme.*/
         User user = listData.get(position);
         holder.nomViewClient.setText(user.getNom());
         holder.prenomViewClient.setText(user.getPrenom());
-        agentViewClient.getSelectedItem().toString();  //a mettre ligne 89
-        holder.editAgentToClient.setText("test");
+        holder.editAgentToClient.setText(holder.agentViewClient.getSelectedItem().toString());
         holder.btn_valider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Log.i("BOUTTON", "VALIDER SIL VOUS PLAIT");
             }
         });
@@ -107,34 +107,7 @@ par programme.*/
 
     }
 
-    public List<User> getMyAgent(){
-        Call<List<User>> call = clientService.listAgents();
-        call.enqueue(new Callback<List<User>>() {
-            @Override
-            public void onResponse(Call<List<User>> call, Response<List<User>> response) {
 
-                if(response.isSuccessful()){
-                    list= response.body();
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<User>> call, Throwable t) {
-                Log.e("ERROR: ", t.getMessage());
-            }
-        });
-        return list;
-    }
-
-    public String[] getMyAgentLogin(){
-        resultat = new String[getMyAgent().size()];
-
-        for(int i= 0; i< getMyAgent().size(); i++){
-            resultat[i] = getMyAgent().get(i).getEmail();
-        }
-        return resultat;
-    }
 
 
 }
