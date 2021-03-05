@@ -166,7 +166,8 @@
             android:onClick="addNewClient"
             android:text="@string/creer_un_compte"
             android:textColor="#FDFDFD"
-            app:backgroundTint="#065C32" />
+            app:backgroundTint="#065C32"
+            app:rippleColor="#76FF03" />
 
         <LinearLayout
             android:layout_width="match_parent"

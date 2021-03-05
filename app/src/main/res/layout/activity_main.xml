@@ -36,7 +36,8 @@
             android:onClick="callCreationPage"
             android:padding="15dp"
             android:text="@string/nouveau_compte"
-            app:backgroundTint="#065C32" />
+            app:backgroundTint="#065C32"
+            app:rippleColor="#76FF03" />
 
         <Button
             android:id="@+id/btn_conversion"
@@ -49,7 +50,7 @@
             android:padding="15dp"
             android:text="@string/conversion"
             app:backgroundTint="#065C32"
-            app:rippleColor="#FFFFFF" />
+            app:rippleColor="#76FF03" />
 
         <TextView
             android:id="@+id/textView"

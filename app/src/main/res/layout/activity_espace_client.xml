@@ -58,7 +58,8 @@
             android:layout_margin="20dp"
             android:fontFamily="@font/alegreya_sans_sc_medium"
             android:text="@string/changer_mot_de_passe"
-            app:backgroundTint="#065C32" />
+            app:backgroundTint="#065C32"
+            app:rippleColor="#76FF03" />
 
         <Button
             android:id="@+id/btn_decoClient"
@@ -67,6 +68,7 @@
             android:layout_gravity="center"
             android:onClick="deconnexionClient"
             android:text="Déconnexion"
-            app:backgroundTint="#065C32" />
+            app:backgroundTint="#065C32"
+            app:rippleColor="#E6FF030B" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

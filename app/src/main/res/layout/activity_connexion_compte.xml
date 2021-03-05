@@ -85,6 +85,7 @@
             android:fontFamily="@font/alegreya_sans_sc_medium"
             android:onClick="goToAdminEspace"
             android:text="@string/se_connecter"
-            app:backgroundTint="#065C32" />
+            app:backgroundTint="#065C32"
+            app:rippleColor="#76FF03" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

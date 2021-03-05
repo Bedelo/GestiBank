@@ -36,7 +36,8 @@
             android:fontFamily="@font/alegreya_sans_sc_medium"
             android:onClick="callAgentsList"
             android:text="@string/liste_des_agents"
-            app:backgroundTint="#065C32" />
+            app:backgroundTint="#065C32"
+            app:rippleColor="#76FF03" />
 
         <Button
             android:id="@+id/btn_addAgent"
@@ -47,7 +48,8 @@
             android:fontFamily="@font/alegreya_sans_sc_medium"
             android:onClick="callAddAgent"
             android:text="@string/ajouter_agent"
-            app:backgroundTint="#065C32" />
+            app:backgroundTint="#065C32"
+            app:rippleColor="#76FF03" />
 
         <Button
             android:id="@+id/btn_listDemandes"
@@ -58,7 +60,8 @@
             android:fontFamily="@font/alegreya_sans_sc_medium"
             android:onClick="callAffectationClient"
             android:text="@string/consulter_les_demandes"
-            app:backgroundTint="#065C32" />
+            app:backgroundTint="#065C32"
+            app:rippleColor="#76FF03" />
 
         <Button
             android:id="@+id/btn_decoAdmin"
@@ -68,7 +71,8 @@
             android:layout_margin="20dp"
             android:onClick="deconnexionAdmin"
             android:text="Déconnexion"
-            app:backgroundTint="#065C32" />
+            app:backgroundTint="#065C32"
+            app:rippleColor="#E6FF030B" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
