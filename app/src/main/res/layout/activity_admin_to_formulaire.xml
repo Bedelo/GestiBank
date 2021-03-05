@@ -47,7 +47,8 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/name" />
+                android:text="@string/name"
+                android:textColor="#065C32" />
 
         </LinearLayout>
 
@@ -74,7 +75,8 @@
                 android:autofillHints=""
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/name" />
+                android:text="@string/name"
+                android:textColor="#065C32" />
         </LinearLayout>
 
         <LinearLayout
@@ -99,7 +101,8 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/matricule" />
+                android:text="@string/matricule"
+                android:textColor="#065C32" />
 
         </LinearLayout>
 
@@ -125,7 +128,8 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textEmailAddress"
-                android:text="@string/email_form" />
+                android:text="@string/email_form"
+                android:textColor="#065C32" />
 
         </LinearLayout>
 
