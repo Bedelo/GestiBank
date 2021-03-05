@@ -32,13 +32,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="300dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/TextView_montant"
-                android:layout_width="135dp"
-                android:layout_height="60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="150dp"
                 android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/montant"
@@ -48,11 +48,16 @@
 
             <EditText
                 android:id="@+id/editTextMontant"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal|center_vertical"
                 android:layout_weight="1"
+                android:autofillHints=""
                 android:ems="10"
-                android:inputType="number" />
+                android:foregroundGravity="center_vertical|center|center_horizontal"
+                android:gravity="center"
+                android:inputType="number"
+                android:paddingTop="50dp" />
 
         </LinearLayout>
 
@@ -95,7 +100,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/usd"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
             <Spinner
                 android:id="@+id/spinner_vers"
@@ -110,7 +115,7 @@
             android:layout_width="184dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_margin="30dp"
             android:fontFamily="@font/alegreya_sans_sc_medium"
             android:onClick="getConverter"
             android:text="@string/convertir"
@@ -127,14 +132,15 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Resultat"
+                android:text="@string/Resultat"
                 android:textSize="27sp" />
 
             <TextView
                 android:id="@+id/textViewRes"
-                android:layout_width="wrap_content"
+                android:layout_width="270dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/alegreya_sans_sc_medium"
+                android:gravity="center"
                 android:text="@string/somme"
                 android:textColor="#065C32"
                 android:textSize="20sp"
