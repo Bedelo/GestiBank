@@ -29,8 +29,34 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView_login"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
+                android:foregroundGravity="fill_vertical"
+                android:gravity="center"
+                android:text="@string/login_mdp" />
+
+            <EditText
+                android:id="@+id/editText_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
+                android:inputType="textPersonName"
+                android:text="Name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginTop="100dp"
             android:layout_marginBottom="20dp"
             android:dividerPadding="5dp"
             android:orientation="horizontal">
@@ -93,6 +119,7 @@
             android:layout_margin="20dp"
             android:fontFamily="@font/alegreya_sans_sc_medium"
             android:text="@string/valider_mdp"
-            app:backgroundTint="#065C32" />
+            app:backgroundTint="#065C32"
+            app:rippleColor="#76FF03" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

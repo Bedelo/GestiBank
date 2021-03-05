@@ -52,7 +52,7 @@
             android:gravity="center|center_horizontal|center_vertical"
             android:text="Suppression"
             android:textColor="#18391A"
-            app:backgroundTint="#979E97" />
+            app:backgroundTint="#065C32" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
