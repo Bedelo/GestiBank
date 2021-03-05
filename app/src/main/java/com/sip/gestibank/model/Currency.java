@@ -27,20 +27,20 @@ public class Currency {
 
     @SerializedName("quotes")
     @Expose
-    private String quotes;
+    private Object quotes;
 
-    public  Currency(){
+   /*  public  Currency(){
 
     }
 
-    public  Currency(String success, String terms, String privacy, String timestamp, String source, String quotes){
+   public  Currency(String success, String terms, String privacy, String timestamp, String source, Object quotes){
         this.privacy = privacy;
         this.quotes = quotes;
         this.source = source;
         this.success = success;
         this.terms = terms;
         this.timestamp = timestamp;
-    }
+    }*/
 
     public String getSuccess() {
         return success;
@@ -82,11 +82,11 @@ public class Currency {
         this.source = source;
     }
 
-    public String getQuotes() {
+    public Object getQuotes() {
         return quotes;
     }
 
-    public void setQuotes(String quotes) {
+    public void setQuotes(Object quotes) {
         this.quotes = quotes;
     }
 }
