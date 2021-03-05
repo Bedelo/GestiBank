@@ -137,14 +137,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="Resultat"
-                android:textSize="27sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/editResultat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="0"
                 android:textSize="27sp" />
         </LinearLayout>
