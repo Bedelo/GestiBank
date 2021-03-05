@@ -8,6 +8,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.os.Bundle;
@@ -36,15 +37,17 @@ public class Conversion extends AppCompatActivity implements AdapterView.OnItemS
     ConversionService conversionService;
     TextView textViewRes;
     String text = "USD";
+    String devise;
+    Double cours, res;
+    EditText input;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conversion);
         textViewRes = findViewById(R.id.textViewRes);
-
         conversionService = APIUtils.getConversionService();
-
+        input = (EditText) findViewById(R.id.editTextMontant);
 
         this.spin = (Spinner) findViewById(R.id.spinner_vers);
         this.spin.setOnItemSelectedListener(this);
@@ -61,7 +64,7 @@ public class Conversion extends AppCompatActivity implements AdapterView.OnItemS
            // Toast.makeText(getApplicationContext(), devises[position], Toast.LENGTH_LONG).show();
         text = this.spin.getSelectedItem().toString();
         url = "http://api.currencylayer.com/live?access_key=84156eafd8c4c4c4c558362771cf6609&currencies="+text+"&format=1/";
-        textViewRes.setText(Password.genPassword());
+        textViewRes.setText("0.00");
 
     }
 
@@ -76,11 +79,15 @@ public class Conversion extends AppCompatActivity implements AdapterView.OnItemS
         call.enqueue(new Callback<Currency>() {
             @Override
             public void onResponse(Call<Currency> call, Response<Currency> response) {
-
                 if(response.isSuccessful()){
-                    Log.i("Data: ", response.body().toString());
 
-
+                    String rep = response.body().getQuotes().toString();
+                    devise = rep.substring(rep.indexOf("=")+1, rep.indexOf("}"));
+                    Log.i("DEVISE: ", devise+"");
+                    cours = Double.parseDouble(devise);
+                    res = cours*Integer.valueOf(input.getText().toString());
+                    res = (double)((int)(res*100))/100;
+                    textViewRes.setText(Double.valueOf(res).toString());
                 }
             }
 
