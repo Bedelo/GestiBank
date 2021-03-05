@@ -14,6 +14,7 @@ import android.os.Bundle;
 
 import com.google.gson.JsonObject;
 import com.sip.gestibank.model.Converter;
+import com.sip.gestibank.model.Currency;
 import com.sip.gestibank.remote.APIUtils;
 import com.sip.gestibank.remote.ConversionService;
 
@@ -61,7 +62,7 @@ public class Conversion extends AppCompatActivity implements AdapterView.OnItemS
         text = this.spin.getSelectedItem().toString();
         url = "http://api.currencylayer.com/live?access_key=84156eafd8c4c4c4c558362771cf6609&currencies="+text+"&format=1/";
         textViewRes.setText(Password.genPassword());
-        conversionService = APIUtils.getConversionServiceFill(url);
+
     }
 
     @Override
@@ -70,23 +71,21 @@ public class Conversion extends AppCompatActivity implements AdapterView.OnItemS
     }
 
     public void getConverter(View v){
-        conversionService = APIUtils.getConversionServiceFill(url);
-        Call<JsonObject> call = conversionService.getConversion();
-        call.enqueue(new Callback<JsonObject>() {
+
+        Call<Currency> call = conversionService.getConversion(url);
+        call.enqueue(new Callback<Currency>() {
             @Override
-            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+            public void onResponse(Call<Currency> call, Response<Currency> response) {
 
                 if(response.isSuccessful()){
-
-
                     Log.i("Data: ", response.body().toString());
 
-                    StringBuffer buffer=new StringBuffer();
+
                 }
             }
 
             @Override
-            public void onFailure(Call<JsonObject> call, Throwable t) {
+            public void onFailure(Call<Currency> call, Throwable t) {
                 Log.e("ERROR: ", t.getMessage());
             }
         });
