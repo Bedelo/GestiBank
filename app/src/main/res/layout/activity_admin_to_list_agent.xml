@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#AE079C4A"
+        android:background="#00079C4A"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +24,7 @@
             android:fontFamily="@font/alegreya_sans_sc_medium"
             android:gravity="center|center_vertical"
             android:text="@string/liste_des_agents"
+            android:textColor="#065C32"
             android:textSize="30sp" />
 
         <Button

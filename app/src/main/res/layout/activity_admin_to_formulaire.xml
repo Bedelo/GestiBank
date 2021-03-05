@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#AE079C4A"
+        android:background="#00079C4A"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="96dp"
         tools:layout_editor_absoluteY="73dp">
@@ -22,6 +22,7 @@
             android:fontFamily="@font/alegreya_sans_sc_medium"
             android:gravity="center_horizontal"
             android:text="@string/formulaire_agent"
+            android:textColor="#065C32"
             android:textSize="30sp" />
 
         <LinearLayout
@@ -36,7 +37,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/alegreya_sans_sc_medium"
-                android:text="@string/prenom" />
+                android:text="@string/prenom"
+                android:textColor="#065C32" />
 
             <EditText
                 android:id="@+id/editPrenomForm"
@@ -61,7 +63,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/alegreya_sans_sc_medium"
-                android:text="@string/nom" />
+                android:text="@string/nom"
+                android:textColor="#065C32" />
 
             <EditText
                 android:id="@+id/editNom"
@@ -86,7 +89,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/alegreya_sans_sc_medium"
-                android:text="@string/matricule" />
+                android:text="@string/matricule"
+                android:textColor="#065C32" />
 
             <EditText
                 android:id="@+id/editMatricule"
@@ -111,7 +115,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/alegreya_sans_sc_medium"
-                android:text="@string/mail" />
+                android:text="@string/mail"
+                android:textColor="#065C32" />
 
             <EditText
                 android:id="@+id/editEmailForm"

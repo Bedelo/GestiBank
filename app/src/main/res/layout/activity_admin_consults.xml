@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#AE079C4A"
+    android:background="#00079C4A"
     tools:context=".AdminConsults">
 
     <ListView
         android:id="@+id/listViewClient"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#AE079C4A"
+        android:background="#00079C4A"
         app:layout_constraintBottom_toTopOf="@+id/affectation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,6 +24,7 @@
         android:layout_width="150dp"
         android:layout_height="48dp"
         android:layout_marginBottom="4dp"
+        android:fontFamily="@font/alegreya_sans_sc_medium"
         android:gravity="center"
         android:onClick="myService"
         android:text="afficher client"

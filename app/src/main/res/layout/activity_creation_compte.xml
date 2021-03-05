@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".CreationCompte">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#CE079C4A"
+        android:background="#00079C4A"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
@@ -153,7 +154,7 @@
                 android:layout_width="195dp"
                 android:layout_height="25dp"
                 android:layout_weight="1"
-                android:background="#20079C4A" />
+                android:background="#00079C4A" />
 
         </LinearLayout>
 
@@ -181,7 +182,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/alegreya_sans_sc_medium"
-                android:text="@string/sivous_avez_d_j_un_compte" />
+                android:text="@string/sivous_avez_d_j_un_compte"
+                android:textColor="#065C32" />
 
             <TextView
                 android:id="@+id/textView7"

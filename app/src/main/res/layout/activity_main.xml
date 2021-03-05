@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#AE079C4A"
+    android:background="#00079C4A"
     android:padding="15dp"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#AE079C4A"
+        android:background="#00079C4A"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +24,7 @@
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="233dp"
-            app:srcCompat="@mipmap/main_logo" />
+            app:srcCompat="@mipmap/logo_bg_round" />
 
         <Button
             android:id="@+id/btn_creation"

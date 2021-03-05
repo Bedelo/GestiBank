@@ -10,7 +10,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="2dp"
-        android:background="#AE079C4A"
+        android:background="#00079C4A"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,10 +54,12 @@
                 android:layout_weight="1"
                 android:autofillHints=""
                 android:ems="10"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:foregroundGravity="center_vertical|center|center_horizontal"
                 android:gravity="center"
                 android:inputType="number"
-                android:paddingTop="50dp" />
+                android:paddingTop="50dp"
+                android:textColor="#065C32" />
 
         </LinearLayout>
 
@@ -100,6 +102,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/usd"
+                android:textColor="#065C32"
                 android:textSize="16sp" />
 
             <Spinner
@@ -132,8 +135,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:text="@string/Resultat"
-                android:textSize="27sp" />
+                android:textColor="#065C32"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textViewRes"

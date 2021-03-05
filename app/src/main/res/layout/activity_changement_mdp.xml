@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#AE079C4A"
     tools:context=".ChangementMdp">
 
     <LinearLayout
@@ -41,7 +40,8 @@
                 android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:foregroundGravity="fill_vertical"
                 android:gravity="center"
-                android:text="@string/login_mdp" />
+                android:text="@string/login_mdp"
+                android:textColor="#065C32" />
 
             <EditText
                 android:id="@+id/editText_login"
@@ -99,6 +99,7 @@
                 android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:gravity="center|fill_vertical"
                 android:text="@string/nouveau_mot_de_passe"
+                android:textColor="#065C32"
                 android:textSize="15sp" />
 
             <EditText
@@ -108,7 +109,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:fontFamily="@font/alegreya_sans_sc_medium"
-                android:inputType="textPersonName|textPassword" />
+                android:inputType="textPassword" />
         </LinearLayout>
 
         <Button
