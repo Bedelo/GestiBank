@@ -49,7 +49,8 @@
                 android:autofillHints=""
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/login" />
+                android:text="@string/login"
+                android:textColor="#065C32" />
 
         </LinearLayout>
 
@@ -75,7 +76,8 @@
                 android:layout_weight="1"
                 android:autofillHints=""
                 android:ems="10"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="#065C32" />
 
         </LinearLayout>
 

@@ -22,4 +22,8 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), CreationCompte.class);
         startActivity(i);
     }
+    public void callConnexionPage(View view){
+        Intent i = new Intent(getApplicationContext(), ConnexionCompte.class);
+        startActivity(i);
+    }
 }
