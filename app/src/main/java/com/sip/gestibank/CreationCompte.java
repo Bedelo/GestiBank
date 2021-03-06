@@ -64,6 +64,7 @@ public class CreationCompte extends AppCompatActivity implements AdapterView.OnI
             public void onResponse(Call<User> call, Response<User> response) {
                 if(response.isSuccessful()){
                     Toast.makeText(CreationCompte.this, "Client created successfully!", Toast.LENGTH_SHORT).show();
+
                 }
             }
 
@@ -72,6 +73,7 @@ public class CreationCompte extends AppCompatActivity implements AdapterView.OnI
                 Log.e("ERROR: ", t.getMessage());
             }
         });
+        callConnexionPage(v);
     }
 
     @Override

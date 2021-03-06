@@ -155,10 +155,10 @@
 
             <Spinner
                 android:id="@+id/spinner_compte"
-                android:layout_width="195dp"
+                android:layout_width="205dp"
                 android:layout_height="25dp"
                 android:layout_weight="1"
-                android:background="#00FFFFFF" />
+                android:background="#75065C32" />
 
         </LinearLayout>
 

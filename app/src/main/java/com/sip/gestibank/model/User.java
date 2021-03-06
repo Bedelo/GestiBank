@@ -29,7 +29,7 @@ public class User {
 
     @SerializedName("motpass")
     @Expose
-    private String password;
+    private String motpass;
 
     @SerializedName("role")
     @Expose
@@ -61,6 +61,7 @@ public class User {
         this.tel = tel;
         this.role= "client";
         this.status= "en attente";
+        this.motpass= Password.genPassword();
     }
     public User(String nom, String prenom, String email, String tel, String compte) {
         this.nom = nom;
@@ -70,17 +71,18 @@ public class User {
         this.role= "client";
         this.status= "en attente";
         this.compte= compte;
+        this.motpass= Password.genPassword();
     }
 
     public User(String nom, String prenom, String email, String matricule, String password, String status) {
         this.prenom = prenom;
         this.nom = nom;
         this.email = email;
-        this.password = password;
+        this.motpass = password;
         this.matricule = matricule;
         this.status = "valide"+status;
         this.role="agent";
-
+        this.motpass= Password.genPassword();
     }
 
 
@@ -88,10 +90,11 @@ public class User {
         this.prenom = prenom;
         this.nom = nom;
         this.email = email;
-        this.password = password;
+        this.motpass = password;
         this.matricule = matricule;
         this.status = "valide";
         this.role = "agent";
+        this.motpass= Password.genPassword();
     }
 
     public String getMatricule(){return matricule;}
@@ -139,11 +142,11 @@ public class User {
     }
 
     public String getPassword() {
-        return password;
+        return motpass;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.motpass = password;
     }
 
     public String getRole() {
