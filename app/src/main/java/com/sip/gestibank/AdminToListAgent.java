@@ -29,7 +29,7 @@ public class AdminToListAgent extends AppCompatActivity {
     List<User> myListAgent;
     AdminService adminService;
     ListView listViewAgent;
-    View view;
+    View myview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +37,12 @@ public class AdminToListAgent extends AppCompatActivity {
         setContentView(R.layout.activity_admin_to_list_agent);
         adminService = APIUtils.adminService();
         myListAgent = new ArrayList<User>();
-        //view = (View) findViewById(R.id.myView);
+        //myview = (View) findViewById(R.id.agentList);
+        myService();
 
     }
 
-    public void callListByAdmin(View v){
+    public void callListByAdmin(){
 
         final ListView listViewAgent = (ListView) findViewById(R.id.listViewAgent);
 
@@ -51,7 +52,7 @@ public class AdminToListAgent extends AppCompatActivity {
     }
 
 
-    public void myService(View v){
+    public void myService(){
         Call<List<User>> call = adminService.getAllAgent();
         call.enqueue(new Callback<List<User>>() {
             @Override
@@ -68,7 +69,7 @@ public class AdminToListAgent extends AppCompatActivity {
                 Log.e("ERROR: ", t.getMessage());
             }
         });
-        callListByAdmin(v);
+        callListByAdmin();
 
     }
 
