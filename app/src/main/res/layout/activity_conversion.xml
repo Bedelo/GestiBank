@@ -57,7 +57,7 @@
                 android:fontFamily="@font/alegreya_sans_sc_medium"
                 android:foregroundGravity="center_vertical|center|center_horizontal"
                 android:gravity="center"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:paddingTop="50dp"
                 android:textColor="#065C32" />
 
@@ -152,6 +152,13 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
+
+        <EditText
+            android:id="@+id/editTextNumberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal" />
 
     </LinearLayout>
 

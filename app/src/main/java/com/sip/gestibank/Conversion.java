@@ -85,7 +85,7 @@ public class Conversion extends AppCompatActivity implements AdapterView.OnItemS
                     devise = rep.substring(rep.indexOf("=")+1, rep.indexOf("}"));
                     Log.i("DEVISE: ", devise+"");
                     cours = Double.parseDouble(devise);
-                    res = cours*Integer.valueOf(input.getText().toString());
+                    res = cours*Double.valueOf(input.getText().toString());
                     res = (double)((int)(res*100))/100;
                     textViewRes.setText(Double.valueOf(res).toString());
                 }
