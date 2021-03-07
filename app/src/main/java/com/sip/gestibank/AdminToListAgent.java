@@ -2,8 +2,10 @@ package com.sip.gestibank;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -28,7 +30,7 @@ public class AdminToListAgent extends AppCompatActivity {
 
     List<User> myListAgent;
     AdminService adminService;
-    ListView listViewAgent;
+    //ListView listViewAgent;
     View myview;
 
     @Override
@@ -60,7 +62,7 @@ public class AdminToListAgent extends AppCompatActivity {
                 if(response.isSuccessful()){
                     myListAgent= response.body();
                     Log.i("MA LISTE: ", myListAgent.toString());
-
+                    callListByAdmin();
                 }
             }
 
@@ -69,7 +71,10 @@ public class AdminToListAgent extends AppCompatActivity {
                 Log.e("ERROR: ", t.getMessage());
             }
         });
-        callListByAdmin();
+
+        //myview = findViewById(R.id.listViewAgent);
+        //final ListView listViewAgent = (ListView) findViewById(R.id.listViewAgent);
+        //callListByAdmin(listViewAgent);
 
     }
 
