@@ -30,8 +30,8 @@ public class AdminToListAgent extends AppCompatActivity {
 
     List<User> myListAgent;
     AdminService adminService;
-    //ListView listViewAgent;
-    View myview;
+    String agentToSuppr;
+    boolean hasChanged = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,17 +39,26 @@ public class AdminToListAgent extends AppCompatActivity {
         setContentView(R.layout.activity_admin_to_list_agent);
         adminService = APIUtils.adminService();
         myListAgent = new ArrayList<User>();
-        //myview = (View) findViewById(R.id.agentList);
+        agentToSuppr = "";
         myService();
 
     }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        // put your code here...
+
+    }
+
+
 
     public void callListByAdmin(){
 
         final ListView listViewAgent = (ListView) findViewById(R.id.listViewAgent);
 
         List<User> user_details = myListAgent;
-        listViewAgent.setAdapter(new AgentListAdapter(AdminToListAgent.this, user_details));
+        listViewAgent.setAdapter(new AgentListAdapter(AdminToListAgent.this, user_details ));
 
     }
 
@@ -71,24 +80,26 @@ public class AdminToListAgent extends AppCompatActivity {
                 Log.e("ERROR: ", t.getMessage());
             }
         });
-
-        //myview = findViewById(R.id.listViewAgent);
-        //final ListView listViewAgent = (ListView) findViewById(R.id.listViewAgent);
-        //callListByAdmin(listViewAgent);
-
     }
 
-    /*public void myService2(View v){
+    /*public void myService2(){
         Call<List<User>> call = adminService.getAllAgent();
         call.enqueue(new Callback<List<User>>() {
             @Override
             public void onResponse(Call<List<User>> call, Response<List<User>> response) {
                 if(response.isSuccessful()){
                     myListAgent= response.body();
-                    Log.i("MA LISTE: ", myListAgent.get(0).toString());
-                    Log.i("MA LISTE: ", myListAgent.get(0).getMatricule());
-                    Log.i("MA LISTE: ", myListAgent.get(0).getPrenom());
-                    Log.i("MA LISTE: ", myListAgent.get(0).getNom());
+                    String supp = "";
+                    for (User u : myListAgent){
+                        if(u.getEmail().equals("SUPP")){
+                            supp = u.getEmail();
+                            Log.i("ATTENTION: ", "Suppression agent: "+u.getMatricule());
+                            hasChanged= true;
+                        }
+                    }
+
+                    myService();
+
                 }
             }
 

@@ -18,9 +18,13 @@ public class AgentListAdapter extends BaseAdapter {
     private List<User> listData;
     private LayoutInflater layoutInflater;
     private Context context;
+    //private String deleteEmail;
+    ;
     public AgentListAdapter(Context aContext, List<User> listData) {
         this.context = aContext;
         this.listData = listData;
+
+        //this.deleteEmail = deleteEmail;
         layoutInflater = LayoutInflater.from(aContext);
  /*LayoutInflater est une classe utilisée pour instancier le fichier XML de
 mise en page dans ses objets de vue correspondants qui peuvent être utilisés dans les
@@ -49,7 +53,7 @@ par programme.*/
             holder.nomViewItem = (TextView)  convertView.findViewById(R.id.nomViewItem);
             holder.prenomViewItem = (TextView)  convertView.findViewById(R.id.prenomViewItem);
             holder.matriculeViewItem = (TextView)  convertView.findViewById(R.id.matriculeViewItem);
-            holder.myBTN = (Button) convertView.findViewById(R.id.btn_ViewItem);
+            holder.myBTN = (ImageView) convertView.findViewById(R.id.btn_ViewItem);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -58,7 +62,15 @@ par programme.*/
         holder.nomViewItem.setText("Nom: " + user.getNom());
         holder.prenomViewItem.setText("Prenom: " + user.getPrenom());
         holder.matriculeViewItem.setText("Matricule: " + user.getMatricule());
+        holder.myBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Log.i("Agent To DELETE:", "=>  "+user.getEmail());
+                user.setEmail("SUPP");
+
+            }
+        });
 
         return convertView;
     }
@@ -67,7 +79,7 @@ par programme.*/
         TextView nomViewItem;
         TextView prenomViewItem;
         TextView matriculeViewItem;
-        Button myBTN;
+        ImageView myBTN;
 
     }
 }
