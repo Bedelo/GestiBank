@@ -63,16 +63,16 @@
             app:backgroundTint="#065C32"
             app:rippleColor="#76FF03" />
 
-        <Button
-            android:id="@+id/btn_decoAdmin"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="20dp"
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="200dp"
+            android:clickable="true"
             android:onClick="deconnexionAdmin"
-            android:text="Déconnexion"
-            app:backgroundTint="#065C32"
-            app:rippleColor="#E6FF030B" />
+            app:srcCompat="@drawable/deco" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
