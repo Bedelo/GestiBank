@@ -5,7 +5,7 @@ public class APIUtils {
     private APIUtils(){
     };
 
-    public static  String API_URL =  "http://192.168.1.31:85/";
+    public static  String API_URL =  "http://192.168.1.25:85/";
     public static  String API_CL = "http://api.currencylayer.com/";
     public static  String Empty_URL = "";
 

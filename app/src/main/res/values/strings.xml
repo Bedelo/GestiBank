@@ -1,5 +1,5 @@
-<resources>
-    <string name="app_name">GestiBank</string>
+<resources >
+    <string name="app_name" >Gestibank</string>
     <string name="login">Login</string>
     <string name="authentification">Authentification</string>
     <string name="creer_un_compte">Creer un compte</string>
@@ -59,4 +59,5 @@
     <string name="valider_mdp">Valider</string>
     <string name="Resultat">Resultat</string>
     <string name="login_mdp">Login:</string>
+
 </resources>

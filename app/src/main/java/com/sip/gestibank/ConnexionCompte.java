@@ -84,6 +84,7 @@ public class ConnexionCompte extends AppCompatActivity {
                              switch(jsonAdmin.getRole()) {
                                  case "admin":
                                      Log.i("AUTHENTIFiCATION : ", "ok");
+                                     MainActivity.logger.setNom(jsonAdmin.getNom());
                                      callEspaceAdmin(v);
                                      break;
                                  case "client":

@@ -50,8 +50,9 @@ public class User {
     public User() {
     }
 
-    public User(String nom) {
+    public User(String nom, String prenom) {
         this.nom= nom;
+        this.prenom= prenom;
     }
 
     public User(String nom, String prenom, String email, String tel) {
